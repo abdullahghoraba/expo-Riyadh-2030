@@ -1,0 +1,32 @@
+<div class="map-ctrl tl">
+  <div class="seg" id="styleSeg" title="Rendering style">
+    @for (s of styles; track s[0]) {
+      <button type="button" [class.on]="scene.mode() === s[0]" (click)="scene.setStyle(s[0])">{{ s[1] }}</button>
+    }
+  </div>
+</div>
+<div class="map-ctrl tr">
+  <div class="seg" id="lightSeg" title="Time of day">
+    @for (l of lights; track l[0]) {
+      <button type="button" [class.on]="state.light() === l[0]" (click)="scene.applyLight(l[0])">{{ l[1] }}</button>
+    }
+  </div>
+  <div class="seg" id="weatherSeg" title="Weather">
+    @for (w of weathers; track w[0]) {
+      <button type="button" [class.on]="state.weather() === w[0]" (click)="scene.setWeather(w[0])">{{ w[1] }}</button>
+    }
+  </div>
+</div>
+
+<div class="hero-actions">
+  <button type="button" id="btnImagine" class="hero gold" (click)="imagine.startImagine()"><span>✨</span> Imagine you're here</button>
+  <button type="button" id="btnTour" class="hero" (click)="imagine.startTour()"><span>🎬</span> Guided tour</button>
+  <button type="button" id="btnShot" class="hero mini" title="Export view as image" (click)="scene.screenshot()">📷</button>
+</div>
+
+<div class="legend-mini">
+  @for (l of legend; track l[1]) {
+    <span><i [style.background]="l[0]"></i>{{ l[1] }}</span>
+  }
+</div>
+<div class="disclaimer" id="disclaimer">{{ disclaimer() }}</div>

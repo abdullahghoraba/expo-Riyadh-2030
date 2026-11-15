@@ -1,0 +1,20 @@
+<h2>Layers</h2>
+<p class="muted">Every layer comes from the site database (JSON/GeoJSON) and can be replaced 1:1 with the organizer's hosted feature layers.</p>
+<h4>Basemap</h4>
+<div class="chips" id="basemapChips">
+  @for (b of basemaps; track b[0]) {
+    <button type="button" [class.on]="state.basemap() === b[0]" (click)="scene.setBasemap(b[0])">{{ b[1] }}</button>
+  }
+</div>
+<div id="layerList" #layerList></div>
+<h4>Site database</h4>
+<table class="sched" id="dataTable">
+  @if (rows(); as r) {
+    <tr><th>File</th><th>Geometry</th><th class="n">Records</th><th>Key fields</th></tr>
+    @for (row of r.files; track row.file) {
+      <tr><td>{{ row.file }}</td><td>{{ row.geom }}</td><td class="n">{{ row.records }}</td><td class="muted">{{ row.keys }}</td></tr>
+    }
+    <tr><td>site.json</td><td>–</td><td class="n">1</td><td class="muted">facts, districts, station</td></tr>
+    <tr><td>narration.json</td><td>–</td><td class="n">{{ r.narration }}</td><td class="muted">voice-over EN / AR</td></tr>
+  }
+</table>

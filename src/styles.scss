@@ -1,1 +1,209 @@
-/* You can add global styles to this file, and also import other style files */
+@import '@arcgis/core/assets/esri/themes/light/main.css';
+
+/* Global look ported from the reference css/app.css. Component-owned parts live in the component .scss files. */
+:root {
+  --g: #0b3d2e; --g2: #12543f; --gold: #c9a24b; --gold2: #f0be28; --bg: #eef3ef; --card: #fff; --ink: #14201b; --muted: #5d6b64;
+  --sel: #f6ecdc; --selb: #c98a2b; --line: #dfe6e1; --r: 14px;
+  --font: "Segoe UI Variable", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+}
+* { box-sizing: border-box }
+html, body { margin: 0; height: 100%; font-family: var(--font); color: var(--ink); background: var(--bg); overflow: hidden }
+button { font-family: inherit; cursor: pointer }
+.hidden { display: none !important }
+.muted { color: var(--muted) }
+.small { font-size: 12px }
+h2 { font-size: 19px; margin: 4px 0 6px; font-weight: 600 }
+h4 { font-size: 13px; margin: 18px 0 8px; font-weight: 600; letter-spacing: .2px }
+
+/* Shell wrapper elements must not break the original flex / absolute layout. */
+app-root, app-header, app-map-overlays, app-side-panel, app-route-pop, app-info-card, app-tool-panel, app-slider-bar,
+app-plot-tab, app-pavilion-tab, app-analysis-tab, app-layers-tab, app-insights-tab,
+app-cinema-overlay, app-cad-modal, app-submit-modal, app-loader, app-toast-host { display: contents }
+
+/* ---------- logo (header, loader) ---------- */
+.logo { display: flex; align-items: center; gap: 8px; color: #fff; line-height: .95 }
+.logo .mark { font-weight: 900; font-size: 22px; letter-spacing: -6px; margin-right: 6px }
+.logo b { display: block; font-size: 13px; letter-spacing: .5px }
+.logo small { font-size: 7px; letter-spacing: 1.2px; opacity: .85 }
+.logo.big .mark { font-size: 44px; letter-spacing: -12px }
+.logo.big b { font-size: 24px }
+.logo.big small { font-size: 11px }
+
+/* ---------- workspace ---------- */
+.workspace { position: absolute; top: 122px; left: 16px; right: 16px; bottom: 14px; display: flex; gap: 14px }
+#viewWrap { position: relative; flex: 1; border-radius: 20px; overflow: hidden; background: #20302a; box-shadow: 0 8px 30px rgba(0, 0, 0, .12) }
+#view { position: absolute; inset: 0 }
+#panel { width: 430px; background: var(--card); border-radius: 20px; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 8px 30px rgba(0, 0, 0, .06) }
+.ptabs { display: flex; gap: 4px; padding: 10px; border-bottom: 1px solid var(--line); flex-wrap: wrap }
+.ptabs button { border: 0; background: #e8efea; border-radius: 18px; padding: 7px 11px; font-size: 12px; color: var(--ink) }
+.ptabs button.on { background: var(--g); color: #fff }
+.tab { display: none; padding: 12px 18px 22px; overflow: auto; flex: 1 }
+.tab.on { display: block }
+
+/* ---------- controls ---------- */
+.seg { display: inline-flex; background: rgba(255, 255, 255, .92); border-radius: 22px; padding: 3px; gap: 2px; box-shadow: 0 2px 10px rgba(0, 0, 0, .15); backdrop-filter: blur(6px) }
+.seg button { border: 0; background: none; border-radius: 18px; padding: 6px 11px; font-size: 12px; color: var(--ink) }
+.seg button.on { background: var(--g); color: #fff }
+.seg.small button { padding: 4px 9px }
+.topnav .seg { background: rgba(255, 255, 255, .12); box-shadow: none }
+.topnav .seg button { color: #fff }
+.topnav .seg button.on { background: #fff; color: var(--g) }
+.seg.dark { background: rgba(255, 255, 255, .12) }
+.seg.dark button { color: #fff }
+.seg.dark button.on { background: #fff; color: #000 }
+.map-ctrl { position: absolute; z-index: 5; display: flex; gap: 8px; flex-wrap: wrap }
+.map-ctrl.tl { top: 14px; left: 62px }
+.map-ctrl.tr { top: 14px; right: 14px; justify-content: flex-end; flex-direction: column; align-items: flex-end }
+.hero-actions { position: absolute; z-index: 5; bottom: 22px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px }
+.hero { border: 0; border-radius: 30px; padding: 13px 22px; font-size: 15px; font-weight: 600; background: rgba(255, 255, 255, .95); color: var(--g); box-shadow: 0 8px 24px rgba(0, 0, 0, .25); display: flex; align-items: center; gap: 8px; transition: transform .15s }
+.hero:hover { transform: translateY(-2px) }
+.hero.gold { background: linear-gradient(135deg, #e4c56b, #b8862b); color: #1c1405 }
+.hero.mini { padding: 13px 15px }
+.legend-mini { position: absolute; z-index: 5; left: 14px; bottom: 22px; background: rgba(255, 255, 255, .92); border-radius: 12px; padding: 8px 12px; font-size: 11.5px; display: flex; flex-direction: column; gap: 4px }
+.legend-mini i { display: inline-block; width: 11px; height: 11px; border-radius: 3px; margin-right: 6px; vertical-align: -1px }
+.disclaimer { position: absolute; z-index: 4; right: 12px; bottom: 6px; font-size: 10px; color: #fff; opacity: .75; text-shadow: 0 1px 2px #000; max-width: 55%; text-align: right }
+.btn { border: 1px solid var(--line); background: #fff; border-radius: 20px; padding: 8px 14px; font-size: 12.5px; color: var(--ink) }
+.btn:hover { border-color: var(--g) }
+.btn.primary { background: var(--g); color: #fff; border-color: var(--g) }
+.btn.primary:disabled { opacity: .4 }
+.btn.ghost { background: #f2f6f3 }
+.btn.small { padding: 5px 10px; font-size: 11.5px }
+.row-btns { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px }
+.row-btns.center { justify-content: center }
+.x { border: 0; background: none; font-size: 15px; color: var(--muted) }
+
+/* ---------- plot tab (as in the portal) ---------- */
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 }
+.chips button { border: 0; border-radius: 18px; padding: 7px 12px; background: #e3ebe5; font-size: 12px; color: var(--ink) }
+.chips button.on { background: var(--g); color: #fff }
+.chips.floors button { min-width: 38px }
+.plots { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px }
+.plot { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; font-size: 12.5px; background: #fff; text-align: left; position: relative }
+.plot b { display: block; margin-bottom: 5px; font-size: 13px }
+.plot.taken { color: #9aa3a0; cursor: not-allowed; background: #fafbfa }
+.plot.sel { background: var(--sel); border: 2px solid var(--selb); padding: 9px 11px }
+.plot.sel:after { content: "✓"; position: absolute; right: 10px; top: 8px; color: var(--selb) }
+.plot.pending { border-color: #e8912d }
+.plot .tag { font-size: 10px; background: #fde3c3; color: #8a4b00; border-radius: 8px; padding: 1px 6px; margin-left: 4px }
+.near { border: 1px solid var(--line); border-radius: 12px; margin-top: 12px; padding: 10px }
+.near-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; font-size: 13px }
+.poi { display: flex; align-items: center; gap: 10px; padding: 7px 8px; border-radius: 9px; cursor: pointer; font-size: 12.5px }
+.poi:hover { background: #f0f5f1 }
+.poi.sel { background: var(--sel); outline: 1.5px solid var(--selb) }
+.poi .dot { width: 28px; height: 28px; border-radius: 50%; flex: none; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 13px }
+.poi .m { margin-left: auto; text-align: right }
+.poi small { display: block; color: var(--muted) }
+.yourplot { display: flex; align-items: center; gap: 12px; background: var(--bg); border-radius: 12px; padding: 12px 14px; margin-top: 12px }
+.yourplot .pin { font-size: 20px; color: var(--g) }
+.yourplot button { margin-left: auto }
+#submitStatus .steps { display: flex; gap: 6px; margin-top: 10px }
+.steps div { flex: 1; font-size: 11px; text-align: center; padding: 7px 4px; border-radius: 8px; background: #eef2ef; color: var(--muted) }
+.steps div.done { background: #d6eedf; color: var(--g); font-weight: 600 }
+.steps div.now { background: #fde8c8; color: #8a4b00; font-weight: 600 }
+
+/* ---------- pavilion tab ---------- */
+.pv-head { display: flex; justify-content: space-between; align-items: flex-start }
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 8px }
+.kpis div { background: #f3f7f4; border-radius: 10px; padding: 8px; text-align: center }
+.kpis b { display: block; font-size: 16px; color: var(--g) }
+.kpis span { font-size: 10.5px; color: var(--muted) }
+.swatches { display: flex; gap: 8px; margin: 6px 0 }
+.swatches button { width: 30px; height: 22px; border-radius: 6px; border: 2px solid transparent }
+.swatches button.on { border-color: var(--ink) }
+.toggles { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 10px; font-size: 12.5px }
+.toggles input { accent-color: var(--g) }
+.cad-wrap { border-radius: 12px; overflow: hidden; background: #0a1a2f; cursor: zoom-in }
+.cad-wrap canvas { width: 100%; display: block }
+table.sched { width: 100%; border-collapse: collapse; font-size: 12px }
+table.sched td, table.sched th { padding: 5px 6px; border-bottom: 1px solid var(--line); text-align: left }
+table.sched th { font-weight: 600; color: var(--muted); font-size: 11px }
+table.sched td.n { text-align: right; font-variant-numeric: tabular-nums }
+
+/* ---------- analysis ---------- */
+.tools { display: flex; flex-direction: column; gap: 8px }
+.tool { display: flex; gap: 12px; align-items: flex-start; border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; cursor: pointer; transition: .15s; background: #fff }
+.tool:hover { border-color: var(--g); background: #f7faf8 }
+.tool.on { border-color: var(--g); background: #e9f3ed; box-shadow: inset 3px 0 0 var(--g) }
+.tool .ti { font-size: 20px; width: 34px; height: 34px; border-radius: 10px; background: #eef3ef; display: flex; align-items: center; justify-content: center; flex: none }
+.tool b { font-size: 13px }
+.tool p { margin: 2px 0 0; font-size: 11.5px; color: var(--muted) }
+.tool .badge { font-size: 9.5px; background: #e3ebe5; border-radius: 6px; padding: 1px 6px; margin-left: 6px; color: var(--g); font-weight: 600 }
+
+#toolPanel { position: absolute; z-index: 6; top: 96px; right: 14px; width: 330px; max-height: calc(100% - 200px); overflow: auto; background: rgba(255, 255, 255, .97); border-radius: 14px; box-shadow: 0 8px 28px rgba(0, 0, 0, .25); padding: 10px 12px }
+.tp-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px }
+#toolBody { font-size: 12.5px }
+#toolBody .row { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dashed var(--line) }
+#toolBody .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -2px }
+#toolWidget .esri-widget { box-shadow: none; width: 100% !important }
+
+#sliderBar { position: absolute; z-index: 6; left: 50%; transform: translateX(-50%); bottom: 86px; width: min(720px, 80%); background: rgba(10, 26, 20, .88); color: #fff; border-radius: 16px; padding: 12px 16px; display: flex; gap: 14px; align-items: center; backdrop-filter: blur(8px) }
+#sliderBar .play { width: 38px; height: 38px; border-radius: 50%; border: 0; background: var(--gold2); font-size: 14px }
+.sb-main { flex: 1 }
+.sb-top { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px }
+.sb-top span { color: var(--gold2); font-weight: 600 }
+#slider { width: 100%; accent-color: var(--gold2) }
+.sb-ticks { display: flex; justify-content: space-between; font-size: 10px; opacity: .7 }
+#sliderLegend { font-size: 10.5px; line-height: 1.5 }
+#sliderLegend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 4px }
+
+/* ---------- popups / cards ---------- */
+.pop { position: absolute; z-index: 6; top: 58px; left: 62px; background: #fff; border-radius: 12px; padding: 10px 32px 10px 12px; font-size: 12.5px; max-width: 330px; box-shadow: 0 6px 20px rgba(0, 0, 0, .25) }
+.pop .x { position: absolute; right: 8px; top: 6px }
+.card { position: absolute; z-index: 6; left: 14px; bottom: 120px; width: 310px; background: #fff; border-radius: 14px; box-shadow: 0 8px 28px rgba(0, 0, 0, .25); padding: 12px 14px; font-size: 12.5px }
+.card h3 { margin: 0 0 4px; font-size: 15px }
+.card .x { position: absolute; right: 10px; top: 8px }
+.card .grid { display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; margin: 8px 0 }
+.card .grid span { color: var(--muted) }
+
+/* ---------- layers / insights ---------- */
+#layerList .esri-layer-list { background: none; padding: 0 }
+#layerList .esri-layer-list__item { border-radius: 8px }
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 8px }
+.facts div { background: linear-gradient(135deg, #0b3d2e, #145a43); color: #fff; border-radius: 12px; padding: 12px 10px }
+.facts b { display: block; font-size: 20px; color: var(--gold2) }
+.facts span { font-size: 11px; opacity: .85 }
+#tab-insights canvas { width: 100%; background: #fafcfb; border-radius: 12px }
+
+/* ---------- cinema ---------- */
+#cinema { position: fixed; inset: 0; z-index: 50; pointer-events: none }
+#cinema .cin-top, #cinema .cin-bottom { position: absolute; left: 0; right: 0; background: #000; pointer-events: auto; transition: height .8s }
+#cinema .cin-top { top: 0; height: 9vh; display: flex; align-items: center; justify-content: space-between; padding: 0 28px; color: #fff }
+#cinema .cin-bottom { bottom: 0; height: 16vh; display: flex; align-items: center; justify-content: center; padding: 0 10vw }
+.cin-brand { font-weight: 700; letter-spacing: 2px; font-size: 14px }
+.cin-brand .mark { letter-spacing: -5px; margin-right: 10px }
+.cin-brand em { font-style: normal; color: var(--gold2); font-weight: 500 }
+.cin-dots { display: flex; gap: 6px }
+.cin-dots i { width: 26px; height: 4px; border-radius: 2px; background: rgba(255, 255, 255, .25) }
+.cin-dots i.done { background: var(--gold2) }
+.cin-dots i.now { background: #fff }
+.cin-ctrl { display: flex; gap: 10px; align-items: center }
+.cin-ctrl button { background: rgba(255, 255, 255, .12); color: #fff; border: 0; border-radius: 16px; padding: 6px 12px; font-size: 13px }
+#subtitle { color: #fff; font-size: clamp(16px, 1.6vw, 24px); text-align: center; line-height: 1.5; text-shadow: 0 2px 6px #000; opacity: 0; transition: opacity .5s }
+#subtitle.show { opacity: 1 }
+#subtitle[dir=rtl] { font-size: clamp(18px, 1.8vw, 27px) }
+body.cinema-on .topnav, body.cinema-on .subbar, body.cinema-on #panel, body.cinema-on .map-ctrl, body.cinema-on .hero-actions, body.cinema-on .legend-mini,
+body.cinema-on #infoCard, body.cinema-on #routePop, body.cinema-on #toolPanel, body.cinema-on #sliderBar { display: none !important }
+body.cinema-on .workspace { inset: 0; gap: 0 }
+body.cinema-on #viewWrap { border-radius: 0 }
+#cta { position: fixed; inset: 0; z-index: 60; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle, rgba(0, 0, 0, .25), rgba(0, 0, 0, .65)); animation: fadein 1s }
+.cta-box { background: rgba(255, 255, 255, .96); border-radius: 24px; padding: 30px 40px; text-align: center; max-width: 520px; box-shadow: 0 20px 60px rgba(0, 0, 0, .4) }
+.cta-kicker { font-size: 12px; letter-spacing: 3px; color: var(--gold); font-weight: 700 }
+.cta-box h2 { font-size: 34px; margin: 8px 0; color: var(--g) }
+@keyframes fadein { from { opacity: 0 } to { opacity: 1 } }
+
+/* ---------- modals ---------- */
+.modal { position: fixed; inset: 0; z-index: 70; background: rgba(5, 20, 15, .55); display: flex; align-items: center; justify-content: center; backdrop-filter: blur(3px) }
+.modal-box { background: #fff; border-radius: 18px; padding: 14px 16px; width: min(560px, 92vw); box-shadow: 0 20px 60px rgba(0, 0, 0, .35) }
+.modal-box.wide { width: 92vw; height: 88vh; display: flex; flex-direction: column }
+.modal-head { display: flex; gap: 12px; align-items: center; margin-bottom: 10px; flex-wrap: wrap }
+.modal-head b { margin-right: auto }
+#cadBig { flex: 1; width: 100%; border-radius: 12px; cursor: grab; min-height: 0 }
+.modal-foot { margin-top: 6px }
+#submitBody .row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--line); font-size: 13px }
+#submitBody textarea { width: 100%; margin-top: 10px; border-radius: 10px; border: 1px solid var(--line); padding: 8px; font-family: inherit }
+
+.esri-ui-top-left { top: 56px }
+.esri-view-surface--inset-outline:focus::after { outline: none !important }
+@media (max-width: 1200px) {
+  #panel { width: 360px }
+}

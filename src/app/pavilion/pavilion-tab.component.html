@@ -1,0 +1,25 @@
+<div class="pv-head">
+  <div><h2 id="pvTitle">Concept pavilion</h2><div class="muted small" id="pvSub"></div></div>
+  <button type="button" class="btn ghost small" id="btnFocusPav" (click)="focus()">Focus 3D</button>
+</div>
+<div class="kpis" id="pvKpis"></div>
+<h4>Design option</h4>
+<div class="chips" id="styleChips"></div>
+<div class="swatches" id="paletteChips"></div>
+<h4>Floors</h4>
+<div class="chips floors" id="floorChips"></div>
+<div class="toggles">
+  <label><input type="checkbox" id="tgExplode" [checked]="state.explode()" (change)="setExplode(checked($event))"> Exploded floors</label>
+  <label><input type="checkbox" id="tgLabels" [checked]="state.labels()" (change)="setLabels(checked($event))"> Room labels</label>
+  <label><input type="checkbox" id="tgFurniture" [checked]="state.furniture()" (change)="setFurniture(checked($event))"> Furniture</label>
+  <label><input type="checkbox" id="tgSection" [checked]="analysis.active() === 'slice'" (change)="setSection(checked($event))"> Section cut</label>
+</div>
+<h4>CAD drawing <span class="muted small" id="cadFloorName"></span></h4>
+<div class="cad-wrap"><canvas id="cadPreview" width="760" height="560"></canvas></div>
+<div class="row-btns">
+  <button type="button" class="btn" id="btnCadOpen">Open CAD viewer</button>
+  <button type="button" class="btn ghost" id="btnDxf">⬇ DXF (AutoCAD)</button>
+  <button type="button" class="btn ghost" id="btnPng">⬇ PNG</button>
+</div>
+<h4>Area schedule</h4>
+<table class="sched" id="areaTable"></table>
