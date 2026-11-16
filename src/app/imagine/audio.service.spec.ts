@@ -94,6 +94,40 @@ describe('narration voice and cancellation', () => {
     await p;
   });
 
+  it('plays the pre-recorded neural clip when no narration server runs, unless a browser voice was chosen', async () => {
+    const played: string[] = [];
+    vi.stubGlobal('fetch', async (url: string) => url === 'voice/index.json'
+      ? new Response(JSON.stringify({ ar: { voice: 'ar-SA-HamedNeural', clips: { 'مَرْحَبًا بِكُمْ': 'abc.mp3' } } }),
+        { headers: { 'content-type': 'application/json' } })
+      : new Response('not found', { status: 404 }));
+    vi.stubGlobal('Audio', class {
+      src = ''; onended: (() => void) | null = null; onerror: (() => void) | null = null;
+      play() { played.push(this.src); setTimeout(() => this.onended?.()); return Promise.resolve(); }
+      pause() { /* noop */ } removeAttribute() { /* noop */ }
+    });
+    TestBed.resetTestingModule();
+    TestBed.configureTestingModule({});
+    const a = TestBed.inject(AudioService);
+    await a.init();
+    expect(a.neuralVoices()).toEqual([]);
+    await a.speak('مَرْحَبًا   بِكُمْ\n', 'ar');
+    expect(played).toEqual(['voice/abc.mp3']);
+    expect(spoken).toHaveLength(0);
+    // a line without a recording falls back to the browser voice
+    const p1 = a.speak('سِتّ دَقائِق', 'ar');
+    await new Promise(r => setTimeout(r));
+    expect(spoken.map(u => u.text)).toEqual(['سِتّ دَقائِق']);
+    a.stop();
+    await p1;
+    a.selectedVoice.set('Arabic local');
+    const p2 = a.speak('مَرْحَبًا بِكُمْ', 'ar');
+    await new Promise(r => setTimeout(r));
+    expect(played).toHaveLength(1);
+    expect(spoken[1]?.voice?.lang).toBe('ar-EG');
+    a.stop();
+    await p2;
+  });
+
   it('captures the requested language and settles canceled speech without an engine callback', async () => {
     const speaking = audio.speak('سِتّ دَقائِق', 'ar');
     await Promise.resolve();

@@ -1,24 +1,19 @@
 import { Injectable, Injector, effect, inject, signal, untracked } from '@angular/core';
 import Camera from '@arcgis/core/Camera';
 import { AnalysisService } from '../analysis/analysis.service';
-import { beatText, fill, ltrIsolate, narrationVars } from '../core/arabic';
+import { beatText, fill, ltrIsolate } from '../core/arabic';
 import { DataService } from '../core/data.service';
-import { along, angLerp, clamp, ease, fmt, heading, lerp, move, offset, pathLength, sleep, smooth } from '../core/geo';
+import { along, angLerp, clamp, ease, heading, lerp, move, offset, pathLength, sleep, smooth } from '../core/geo';
 import { Lang, LightMode, LonLat, NarrationStep } from '../core/models';
 import { StateService } from '../core/state.service';
-import { WalkRoute } from '../core/walk-router';
 import { LayersService } from '../map/layers.service';
 import { SceneService } from '../map/scene.service';
 import { PavilionService } from '../pavilion/pavilion.service';
 import { PlotSelectionService } from '../plots/plot-selection.service';
 import { AudioService } from './audio.service';
+import { NarrationVars, narrationValues, spokenLine } from './narration-lines';
 
 export type CinemaMode = 'imagine' | 'tour';
-
-/** Values filled into narration.json placeholders (English + Arabic forms). */
-type NarrationVars = Record<string, string | number> & {
-  walk: number; route: WalkRoute; plot: string; district: string; floors: number; gfa: string; aid: number;
-};
 
 export interface SubtitleState { text: string; rtl: boolean; show: boolean }
 export interface CtaState { title: string; sub: string; detail: string; submitLabel: string; lang: Lang }
@@ -63,7 +58,7 @@ export class ImagineService {
       clearTimeout(warm);
       warm = setTimeout(() => untracked(() => {
         const N = this.data.d.narration, opening = [N.imagine[0], N.tour[0]].filter(Boolean);
-        void this.audio.prefetch(opening.map(b => (lang === 'ar' ? beatText(b, {}).spoken : fill(b.en, {}))), lang);
+        void this.audio.prefetch(opening.map(b => spokenLine(b, lang, {})), lang);
       }), 3000);
     });
     let previousLanguage = this.state.lang();
@@ -214,19 +209,7 @@ export class ImagineService {
   private vars(): NarrationVars {
     const p = this.state.currentPlot(), spec = this.state.detailSpec();
     if (!p || !spec) throw CANCEL;
-    const D = this.data.d, st = D.site, mpm = st.walkingSpeedMpm, router = this.data.router;
-    const d = st.districts.find(x => x.id === p.district)!;
-    const spt = router.from([p.ex, p.ey]);
-    const near = (t: string): number =>
-      Math.round(Math.min(...D.services.features.filter(f => f.properties.type === t).map(f => router.to(spt, f.geometry.coordinates).length)) / 10) * 10;
-    const walk = router.route(st.station, [p.ex, p.ey]);
-    const P = this.pavilion.pavilionPlan(spec), gfa = Math.round(P.gfa / 10) * 10;
-    const v = {
-      walk: Math.max(1, Math.round(walk.length / mpm)), walkLen: walk.length, route: walk, plot: p.pid, district: d.name, districtAr: d.nameAr,
-      floors: P.floors.length, gfa: fmt(gfa), restroom: near('restroom'), prayer: near('prayer'), aid: near('aid')
-    };
-    // Arabic phrases with correct number–noun agreement: xxxAr (spoken, words) and xxxArTxt (subtitle, digits)
-    return Object.assign(v, narrationVars({ ...v, route: undefined, gfa })) as unknown as NarrationVars;
+    return narrationValues(this.data.d, this.data.router, p, this.pavilion.pavilionPlan(spec));
   }
 
   /**
@@ -235,7 +218,7 @@ export class ImagineService {
    */
   private prefetchNarration(list: NarrationStep[], v: NarrationVars): void {
     const lang = this.state.lang(), vals = v as unknown as Record<string, string | number>;
-    void this.audio.prefetch(list.map(b => (lang === 'ar' ? beatText(b, vals).spoken : fill(b.en, vals))), lang);
+    void this.audio.prefetch(list.map(b => spokenLine(b, lang, vals)), lang);
   }
 
   /**

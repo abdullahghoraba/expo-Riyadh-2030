@@ -2,6 +2,7 @@ import { Injectable, computed, inject, signal } from '@angular/core';
 import { Lang } from '../core/models';
 import { StateService } from '../core/state.service';
 import { ToastService } from '../core/toast.service';
+import { speechKey } from './narration-lines';
 
 /** Longest piece handed to the speech engine at once (Chrome/Edge cut long online-voice utterances after ~15 s). */
 const MAX_CHUNK = 160;
@@ -36,10 +37,17 @@ export interface NeuralVoice { id: string; name: string; lang: Lang }
 export const NEURAL = 'neural:';
 
 /**
+ * Narration clips pre-recorded with the neural voices by tools/tts-prerender.mjs for static hosting (GitHub Pages),
+ * where no narration server runs: `voice/index.json` → `{ ar: { voice, clips: { "<spoken text>": "<file>.mp3" } } }`.
+ */
+export type RecordedVoices = Partial<Record<Lang, { voice: string; clips: Record<string, string> }>>;
+
+/**
  * Voice-over (port of reference js/audio.js). Order of preference:
  * 1. Neural voices from the local narration server (/tts → tools/tts-server.mjs; Saudi "Hamed" for Arabic) –
  *    correct Modern Standard Arabic stress and intonation on every browser.
- * 2. Browser Web Speech voices.
+ * 2. The same neural voice pre-recorded into static files (voice/index.json, GitHub Pages builds).
+ * 3. Browser Web Speech voices.
  * Arabic prefers the Saudi neural voices (Edge: "Microsoft Hamed / Zariyah Online (Natural) - Arabic (Saudi Arabia)").
  */
 @Injectable({ providedIn: 'root' })
@@ -70,6 +78,8 @@ export class AudioService {
   private ready: Promise<void> | null = null;
   private lastProbe = 0;
   private readonly prefetched = new Set<string>();
+  private recorded: RecordedVoices = {};
+  private recordedLoad: Promise<void> | null = null;
 
   get available(): boolean {
     return !!this.synth;
@@ -81,7 +91,30 @@ export class AudioService {
    * @returns Promise resolving when voices are loaded.
    */
   init(): Promise<void> {
-    return (this.ready ??= Promise.all([this.initVoices(), this.probeNeural()]).then(() => undefined));
+    return (this.ready ??= Promise.all([this.initVoices(), this.probeNeural(), this.loadRecorded()]).then(() => undefined));
+  }
+
+  /**
+   * Loads the index of pre-recorded neural clips (only present in static builds; once per page).
+   */
+  private loadRecorded(): Promise<void> {
+    if (typeof fetch === 'undefined' || typeof Audio === 'undefined') return Promise.resolve();
+    return (this.recordedLoad ??= (async () => {
+      try {
+        const r = await fetch('voice/index.json', { cache: 'no-cache' });
+        if (r.ok && /json/.test(r.headers.get('content-type') ?? '')) this.recorded = await r.json() as RecordedVoices;
+      } catch { /* no recordings (dev server) → narration server or browser voices */ }
+    })());
+  }
+
+  /**
+   * URL of the pre-recorded clip for `text`, unless a browser voice was explicitly picked for `lang`.
+   */
+  private recordedUrl(text: string, lang: Lang): string | null {
+    const sel = this.selectedVoice();
+    if (sel && !sel.startsWith(NEURAL) && this.voices.some(v => v.voiceURI === sel && new RegExp('^' + lang + '(?:[-_]|$)', 'i').test(v.lang))) return null;
+    const file = this.recorded[lang]?.clips[speechKey(text)];
+    return file ? `voice/${file}` : null;
   }
 
   /**
@@ -131,20 +164,20 @@ export class AudioService {
 
   /** Relative URL, so it also works when the app is served under a sub-path (e.g. GitHub Pages /repo-name/). */
   private neuralUrl(text: string, lang: Lang, voice: string): string {
-    return `tts?lang=${lang}&voice=${encodeURIComponent(voice)}&text=${encodeURIComponent(text.replace(/\s+/g, ' ').trim())}`;
+    return `tts?lang=${lang}&voice=${encodeURIComponent(voice)}&text=${encodeURIComponent(speechKey(text))}`;
   }
 
   /**
-   * Warms the server cache for upcoming narration (synthesis takes a few seconds per clip, cached replay is instant).
-   * Clips are requested one after another so the first beat is ready first.
+   * Warms the server cache for upcoming narration (synthesis takes a few seconds per clip, cached replay is instant),
+   * or the browser cache for pre-recorded clips. Clips are requested one after another so the first beat is ready first.
    */
   async prefetch(texts: string[], lang: Lang = this.state.lang()): Promise<void> {
-    await this.probeNeural();
+    await Promise.all([this.probeNeural(), this.loadRecorded()]);
+    if (this.muted()) return;
     const voice = this.neuralVoice(lang);
-    if (!voice || this.muted()) return;
     for (const t of texts) {
-      const url = this.neuralUrl(t, lang, voice);
-      if (!t.trim() || this.prefetched.has(url)) continue;
+      const url = !t.trim() ? null : voice ? this.neuralUrl(t, lang, voice) : this.recordedUrl(t, lang);
+      if (!url || this.prefetched.has(url)) continue;
       this.prefetched.add(url);
       try { await (await fetch(url)).arrayBuffer(); } catch { this.prefetched.delete(url); }
     }
@@ -294,6 +327,14 @@ export class AudioService {
     if (neural) {
       S?.cancel();
       const ok = await this.playUrl(this.neuralUrl(text, lang, neural), text, lang, 15000);
+      if (ok || gen !== this.gen || this.muted()) return;
+    }
+
+    // 2. the same neural voice, pre-recorded (static hosting such as GitHub Pages has no narration server)
+    const recorded = this.recordedUrl(text, lang);
+    if (recorded) {
+      S?.cancel();
+      const ok = await this.playUrl(recorded, text, lang, 5000);
       if (ok || gen !== this.gen || this.muted()) return;
     }
 

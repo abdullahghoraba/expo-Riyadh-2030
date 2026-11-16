@@ -1,8 +1,8 @@
 # Builds the Angular app and publishes it as a live demo on GitHub Pages:
 #   https://<your-user>.github.io/<repository-name>/
 # One-time setup on GitHub: Settings → Pages → "Build and deployment" → Source: GitHub Actions.
-# Note: GitHub Pages only serves static files, so the neural voice server (tools/tts-server.mjs) does not run there;
-# the narration then uses the browser's voices (best Arabic voices: Microsoft Edge).
+# GitHub Pages only serves static files, so the neural voice server (tools/tts-server.mjs) cannot run there:
+# tools/tts-prerender.mjs records every narration line with the same Saudi neural voice (Hamed) into voice/*.mp3.
 name: Deploy demo to GitHub Pages
 
 on:
@@ -37,6 +37,19 @@ jobs:
 
       - name: Production build for /<repository-name>/
         run: npx ng build --base-href "/${{ github.event.repository.name }}/"
+
+      - name: Restore recorded narration clips
+        uses: actions/cache@v4
+        with:
+          path: .tts-cache
+          key: tts-${{ hashFiles('public/data/**', 'src/app/core/arabic.ts', 'src/app/imagine/narration-lines.ts', 'src/app/pavilion/pavilion-plan.ts', 'tools/tts-*.mjs') }}
+          restore-keys: tts-
+
+      - name: Pre-record the Arabic narration (neural voice)
+        run: node tools/tts-prerender.mjs dist/expo-twin-angular/browser
+        # without the recordings the demo still works, with the browser's voices
+        continue-on-error: true
+        timeout-minutes: 30
 
       - uses: actions/configure-pages@v5
 

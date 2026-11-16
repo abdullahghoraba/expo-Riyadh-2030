@@ -19,7 +19,8 @@ Browser voices on Windows are usually the old `Microsoft Hoda – Arabic (Egypt)
 
 - Each beat is spoken as one clip from its fully vocalised `arSpeech` text. Clips are cached as MP3 in `.tts-cache/`; the opening lines and the current run's beats are pre-fetched, so replays are instant.
 - The voice menu lists the neural voices with ★. `TTS_AR_VOICE` / `TTS_EN_VOICE` change the defaults, `TTS_PORT` the port (4310).
-- Without the server (`npm run start:app`, or a static deployment) the app falls back to browser voices, then to an online stream. The narration text is sent to Microsoft's speech service; it is the synthetic script with no personal data. For production, use an Azure Speech key with the same voices.
+- Static deployments (GitHub Pages, `.github/workflows/deploy-pages.yml`) cannot run the server, so after `ng build` the workflow runs `node tools/tts-prerender.mjs dist/expo-twin-angular/browser`. It computes every Arabic line the app can speak (all plots × pavilion styles × floor counts, with the app's own `narration-lines.ts`), records each with the Hamed voice and writes `voice/*.mp3` plus `voice/index.json` (about 56 clips, 10 MB). The app plays these recordings when no server answers. Add `--langs=ar,en` to record English too.
+- Without the server or recordings (`npm run start:app`) the app falls back to browser voices, then to an online stream. The narration text is sent to Microsoft's speech service; it is the synthetic script with no personal data. For production, use an Azure Speech key with the same voices.
 
 Arabic learning guide: [Markdown](docs/ANGULAR-EXPLAINED-AR.md) and [Word](docs/ANGULAR-EXPLAINED-AR.docx). It explains Angular concepts, all 19 components, services, source files, and the main application flows using examples from this project.
 
