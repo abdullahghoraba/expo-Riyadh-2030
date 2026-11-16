@@ -1,0 +1,19 @@
+<div id="infoCard" class="card" [class.hidden]="!plots.card()">
+  @if (plots.card(); as c) {
+    <button type="button" class="x" id="icX" (click)="plots.closeCard()">✕</button>
+    <h3>{{ (c.title) | t }}</h3>
+    @if (c.sub) {
+      <div class="muted">{{ (c.sub) | t }}</div>
+    }
+    <div class="grid">
+      @for (r of c.rows; track $index) {
+        <span>{{ (r[0]) | t }}</span><b>{{ (r[1]) | t }}</b>
+      }
+    </div>
+    <div class="row-btns" id="icB">
+      @for (b of c.buttons; track $index) {
+        <button type="button" [class]="'btn small ' + (b.cls || '')" (click)="b.action()">{{ (b.label) | t }}</button>
+      }
+    </div>
+  }
+</div>

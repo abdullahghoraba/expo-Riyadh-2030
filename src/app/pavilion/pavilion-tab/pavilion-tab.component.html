@@ -1,0 +1,53 @@
+<div class="pv-head">
+  <div><h2 id="pvTitle">{{ (view()?.title ?? 'Concept pavilion') | t }}</h2><div class="muted small" id="pvSub">{{ (view()?.sub ?? '') | t }}</div></div>
+  <button type="button" class="btn ghost small" id="btnFocusPav" (click)="focus()">{{ "Focus 3D" | t }}</button>
+</div>
+<div class="kpis" id="pvKpis">
+  @for (k of view()?.kpis ?? []; track k[1]) {
+    <div><b>{{ (k[0]) | t }}</b><span>{{ (k[1]) | t }}</span></div>
+  }
+</div>
+<h4 [style.display]="view()?.mine ? '' : 'none'">{{ "Design option" | t }}</h4>
+<div class="chips" id="styleChips" [style.display]="view()?.mine ? '' : 'none'">
+  @if (view()?.mine) {
+    @for (st of styles; track st[0]) {
+      <button type="button" [class.on]="view()?.spec?.style === st[0]" (click)="setStyle(st[0])">{{ (st[1]) | t }}</button>
+    }
+  }
+</div>
+<div class="swatches" id="paletteChips" [style.display]="view()?.mine ? '' : 'none'">
+  @if (view()?.mine) {
+    @for (p of palettes; track p.i) {
+      <button type="button" [class.on]="view()?.spec?.palette === p.i" [title]="(p.name) | t" [style.background]="p.bg" (click)="setPalette(p.i)"></button>
+    }
+  }
+</div>
+<h4>{{ "Floors" | t }}</h4>
+<div class="chips floors" id="floorChips">
+  @for (c of floorChips(); track $index) {
+    <button type="button" [class.on]="c.on" [title]="(c.title) | t" (click)="c.run()">{{ (c.label) | t }}</button>
+  }
+</div>
+<div class="toggles">
+  <label><input type="checkbox" id="tgExplode" [checked]="state.explode()" (change)="setExplode(checked($event))"> {{ "Exploded floors" | t }}</label>
+  <label><input type="checkbox" id="tgLabels" [checked]="state.labels()" (change)="setLabels(checked($event))"> {{ "Room labels" | t }}</label>
+  <label><input type="checkbox" id="tgFurniture" [checked]="state.furniture()" (change)="setFurniture(checked($event))"> {{ "Furniture" | t }}</label>
+  <label><input type="checkbox" id="tgSection" [checked]="analysis.active() === 'slice'" (change)="setSection(checked($event))"> {{ "Section cut" | t }}</label>
+</div>
+<h4>{{ "CAD drawing" | t }} <span class="muted small" id="cadFloorName">{{ (cadFloorName()) | t }}</span></h4>
+<div class="cad-wrap" (click)="cad.openViewer()"><canvas id="cadPreview" #cadPreview width="760" height="560"></canvas></div>
+<div class="row-btns">
+  <button type="button" class="btn" id="btnCadOpen" (click)="cad.openViewer()">{{ "Open CAD viewer" | t }}</button>
+  <button type="button" class="btn ghost" id="btnDxf" (click)="exportDxf()">{{ "⬇ DXF (AutoCAD)" | t }}</button>
+  <button type="button" class="btn ghost" id="btnPng" (click)="cad.exportPng(cad.previewLevel())">{{ "⬇ PNG" | t }}</button>
+</div>
+<h4>{{ "Area schedule" | t }}</h4>
+<table class="sched" id="areaTable">
+  @if (schedule(); as sc) {
+    <tr><th>{{ "Floor" | t }}</th><th>{{ "Space" | t }}</th><th class="n">{{ "Area m²" | t }}</th></tr>
+    @for (r of sc.rows; track $index) {
+      <tr><td>{{ (r.floor) | t }}</td><td><i style="display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px" [style.background]="r.color"></i>{{ (r.label) | t }}</td><td class="n">{{ (r.area) | t }}</td></tr>
+    }
+    <tr><th colspan="2">{{ "Gross floor area" | t }}</th><th class="n">{{ (sc.gfa) | t }}</th></tr>
+  }
+</table>

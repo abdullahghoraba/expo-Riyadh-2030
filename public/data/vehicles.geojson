@@ -1,1 +1,4770 @@
-{"type":"FeatureCollection","name":"vehicles","metadata":{"source":"Synthetic demo data – illustrative layout, not the official masterplan","generated":"2026-11-12"},"features":[{"type":"Feature","properties":{"model":"Ford_Expedition","heading":270},"geometry":{"type":"Point","coordinates":[46.7252341,24.8941983]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":270},"geometry":{"type":"Point","coordinates":[46.7252341,24.8942212]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":270},"geometry":{"type":"Point","coordinates":[46.7252341,24.894267]}},{"type":"Feature","properties":{"model":"Taxi","heading":270},"geometry":{"type":"Point","coordinates":[46.7252341,24.8942899]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":270},"geometry":{"type":"Point","coordinates":[46.7252341,24.8943357]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":270},"geometry":{"type":"Point","coordinates":[46.7252341,24.8943586]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":270},"geometry":{"type":"Point","coordinates":[46.7252341,24.8943815]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":270},"geometry":{"type":"Point","coordinates":[46.7252341,24.894519]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":270},"geometry":{"type":"Point","coordinates":[46.7252341,24.8947709]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":270},"geometry":{"type":"Point","coordinates":[46.7252341,24.8948167]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":270},"geometry":{"type":"Point","coordinates":[46.7252341,24.8950687]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":270},"geometry":{"type":"Point","coordinates":[46.7252341,24.8951145]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":270},"geometry":{"type":"Point","coordinates":[46.7252341,24.8951603]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":270},"geometry":{"type":"Point","coordinates":[46.7252341,24.8951833]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":270},"geometry":{"type":"Point","coordinates":[46.7252341,24.8952749]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":270},"geometry":{"type":"Point","coordinates":[46.7252341,24.8953665]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":270},"geometry":{"type":"Point","coordinates":[46.7252341,24.895504]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":270},"geometry":{"type":"Point","coordinates":[46.7252341,24.8955956]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":270},"geometry":{"type":"Point","coordinates":[46.7252341,24.8956185]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":270},"geometry":{"type":"Point","coordinates":[46.7252341,24.8956414]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":270},"geometry":{"type":"Point","coordinates":[46.7252341,24.895733]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":270},"geometry":{"type":"Point","coordinates":[46.7252341,24.8957788]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":90},"geometry":{"type":"Point","coordinates":[46.7253946,24.894267]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":90},"geometry":{"type":"Point","coordinates":[46.7253946,24.8943128]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":90},"geometry":{"type":"Point","coordinates":[46.7253946,24.8943815]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":90},"geometry":{"type":"Point","coordinates":[46.7253946,24.894496]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":90},"geometry":{"type":"Point","coordinates":[46.7253946,24.8945419]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":90},"geometry":{"type":"Point","coordinates":[46.7253946,24.894748]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":90},"geometry":{"type":"Point","coordinates":[46.7253946,24.8948397]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":90},"geometry":{"type":"Point","coordinates":[46.7253946,24.8948855]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":90},"geometry":{"type":"Point","coordinates":[46.7253946,24.8949084]}},{"type":"Feature","properties":{"model":"Taxi","heading":90},"geometry":{"type":"Point","coordinates":[46.7253946,24.8951145]}},{"type":"Feature","properties":{"model":"Taxi","heading":90},"geometry":{"type":"Point","coordinates":[46.7253946,24.8951833]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":90},"geometry":{"type":"Point","coordinates":[46.7253946,24.8952291]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":90},"geometry":{"type":"Point","coordinates":[46.7253946,24.895252]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":90},"geometry":{"type":"Point","coordinates":[46.7253946,24.8953207]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":90},"geometry":{"type":"Point","coordinates":[46.7253946,24.8955269]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":90},"geometry":{"type":"Point","coordinates":[46.7253946,24.8956872]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":90},"geometry":{"type":"Point","coordinates":[46.7253946,24.8957101]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":90},"geometry":{"type":"Point","coordinates":[46.7253946,24.895733]}},{"type":"Feature","properties":{"model":"Taxi","heading":90},"geometry":{"type":"Point","coordinates":[46.7253946,24.8957788]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":90},"geometry":{"type":"Point","coordinates":[46.7253946,24.8958017]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":270},"geometry":{"type":"Point","coordinates":[46.725452,24.8941753]}},{"type":"Feature","properties":{"model":"Taxi","heading":270},"geometry":{"type":"Point","coordinates":[46.725452,24.8942441]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":270},"geometry":{"type":"Point","coordinates":[46.725452,24.8943357]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":270},"geometry":{"type":"Point","coordinates":[46.725452,24.8943586]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":270},"geometry":{"type":"Point","coordinates":[46.725452,24.8943815]}},{"type":"Feature","properties":{"model":"Taxi","heading":270},"geometry":{"type":"Point","coordinates":[46.725452,24.8944273]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":270},"geometry":{"type":"Point","coordinates":[46.725452,24.8945419]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":270},"geometry":{"type":"Point","coordinates":[46.725452,24.8946335]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":270},"geometry":{"type":"Point","coordinates":[46.725452,24.8946564]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":270},"geometry":{"type":"Point","coordinates":[46.725452,24.8947022]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":270},"geometry":{"type":"Point","coordinates":[46.725452,24.8949542]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":270},"geometry":{"type":"Point","coordinates":[46.725452,24.8949771]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":270},"geometry":{"type":"Point","coordinates":[46.725452,24.8950229]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":270},"geometry":{"type":"Point","coordinates":[46.725452,24.8952062]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":270},"geometry":{"type":"Point","coordinates":[46.725452,24.8953207]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":270},"geometry":{"type":"Point","coordinates":[46.725452,24.8953665]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":270},"geometry":{"type":"Point","coordinates":[46.725452,24.8954352]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":270},"geometry":{"type":"Point","coordinates":[46.725452,24.895481]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.8942441]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.8943128]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.8943586]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.8945419]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.8945648]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.8945877]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.8946335]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.8946793]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.8947938]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.8948167]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.8948855]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.8949084]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.8950229]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.8950916]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.8951145]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.895252]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.8953665]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.8953894]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.8954123]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.8954581]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.895504]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.8955498]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.8955727]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":90},"geometry":{"type":"Point","coordinates":[46.7256124,24.8955956]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":270},"geometry":{"type":"Point","coordinates":[46.7256699,24.8941753]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":270},"geometry":{"type":"Point","coordinates":[46.7256699,24.8942212]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":270},"geometry":{"type":"Point","coordinates":[46.7256699,24.8942899]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":270},"geometry":{"type":"Point","coordinates":[46.7256699,24.8943586]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":270},"geometry":{"type":"Point","coordinates":[46.7256699,24.8944502]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":270},"geometry":{"type":"Point","coordinates":[46.7256699,24.8945648]}},{"type":"Feature","properties":{"model":"Taxi","heading":270},"geometry":{"type":"Point","coordinates":[46.7256699,24.8945877]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":270},"geometry":{"type":"Point","coordinates":[46.7256699,24.8946564]}},{"type":"Feature","properties":{"model":"Taxi","heading":270},"geometry":{"type":"Point","coordinates":[46.7256699,24.8947938]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":270},"geometry":{"type":"Point","coordinates":[46.7256699,24.8948397]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":270},"geometry":{"type":"Point","coordinates":[46.7256699,24.8948626]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":270},"geometry":{"type":"Point","coordinates":[46.7256699,24.8950687]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":270},"geometry":{"type":"Point","coordinates":[46.7256699,24.8952291]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":270},"geometry":{"type":"Point","coordinates":[46.7256699,24.8952978]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":270},"geometry":{"type":"Point","coordinates":[46.7256699,24.8953894]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":270},"geometry":{"type":"Point","coordinates":[46.7256699,24.8954123]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":270},"geometry":{"type":"Point","coordinates":[46.7256699,24.8955498]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":270},"geometry":{"type":"Point","coordinates":[46.7256699,24.8956414]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":270},"geometry":{"type":"Point","coordinates":[46.7256699,24.8956643]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":270},"geometry":{"type":"Point","coordinates":[46.7256699,24.8956872]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":270},"geometry":{"type":"Point","coordinates":[46.7256699,24.8958247]}},{"type":"Feature","properties":{"model":"Taxi","heading":90},"geometry":{"type":"Point","coordinates":[46.7258303,24.8941753]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":90},"geometry":{"type":"Point","coordinates":[46.7258303,24.8941983]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":90},"geometry":{"type":"Point","coordinates":[46.7258303,24.8942441]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":90},"geometry":{"type":"Point","coordinates":[46.7258303,24.8942899]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":90},"geometry":{"type":"Point","coordinates":[46.7258303,24.8943357]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":90},"geometry":{"type":"Point","coordinates":[46.7258303,24.8945419]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":90},"geometry":{"type":"Point","coordinates":[46.7258303,24.8945877]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":90},"geometry":{"type":"Point","coordinates":[46.7258303,24.8946564]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":90},"geometry":{"type":"Point","coordinates":[46.7258303,24.8947251]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":90},"geometry":{"type":"Point","coordinates":[46.7258303,24.8948855]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":90},"geometry":{"type":"Point","coordinates":[46.7258303,24.8949313]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":90},"geometry":{"type":"Point","coordinates":[46.7258303,24.895]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":90},"geometry":{"type":"Point","coordinates":[46.7258303,24.8950458]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":90},"geometry":{"type":"Point","coordinates":[46.7258303,24.8951145]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":90},"geometry":{"type":"Point","coordinates":[46.7258303,24.8952978]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":90},"geometry":{"type":"Point","coordinates":[46.7258303,24.8953207]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":90},"geometry":{"type":"Point","coordinates":[46.7258303,24.8953894]}},{"type":"Feature","properties":{"model":"Taxi","heading":90},"geometry":{"type":"Point","coordinates":[46.7258303,24.895481]}},{"type":"Feature","properties":{"model":"Taxi","heading":90},"geometry":{"type":"Point","coordinates":[46.7258303,24.895504]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":90},"geometry":{"type":"Point","coordinates":[46.7258303,24.8956643]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":270},"geometry":{"type":"Point","coordinates":[46.7258878,24.8942899]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":270},"geometry":{"type":"Point","coordinates":[46.7258878,24.8944731]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":270},"geometry":{"type":"Point","coordinates":[46.7258878,24.8947022]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":270},"geometry":{"type":"Point","coordinates":[46.7258878,24.8947251]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":270},"geometry":{"type":"Point","coordinates":[46.7258878,24.894748]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":270},"geometry":{"type":"Point","coordinates":[46.7258878,24.8947709]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":270},"geometry":{"type":"Point","coordinates":[46.7258878,24.8947938]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":270},"geometry":{"type":"Point","coordinates":[46.7258878,24.8949084]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":270},"geometry":{"type":"Point","coordinates":[46.7258878,24.8949771]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":270},"geometry":{"type":"Point","coordinates":[46.7258878,24.8952062]}},{"type":"Feature","properties":{"model":"Taxi","heading":270},"geometry":{"type":"Point","coordinates":[46.7258878,24.8952749]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":270},"geometry":{"type":"Point","coordinates":[46.7258878,24.8952978]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":270},"geometry":{"type":"Point","coordinates":[46.7258878,24.8953207]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":270},"geometry":{"type":"Point","coordinates":[46.7258878,24.8956414]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":270},"geometry":{"type":"Point","coordinates":[46.7258878,24.8956643]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":270},"geometry":{"type":"Point","coordinates":[46.7258878,24.8956872]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":270},"geometry":{"type":"Point","coordinates":[46.7258878,24.8957788]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":270},"geometry":{"type":"Point","coordinates":[46.7258878,24.8958247]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":90},"geometry":{"type":"Point","coordinates":[46.7260482,24.894519]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":90},"geometry":{"type":"Point","coordinates":[46.7260482,24.894748]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":90},"geometry":{"type":"Point","coordinates":[46.7260482,24.8949542]}},{"type":"Feature","properties":{"model":"Taxi","heading":90},"geometry":{"type":"Point","coordinates":[46.7260482,24.8950687]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":90},"geometry":{"type":"Point","coordinates":[46.7260482,24.8952291]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":90},"geometry":{"type":"Point","coordinates":[46.7260482,24.8952978]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":90},"geometry":{"type":"Point","coordinates":[46.7260482,24.8953436]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":90},"geometry":{"type":"Point","coordinates":[46.7260482,24.8954581]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":90},"geometry":{"type":"Point","coordinates":[46.7260482,24.895504]}},{"type":"Feature","properties":{"model":"Taxi","heading":90},"geometry":{"type":"Point","coordinates":[46.7260482,24.8957788]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":270},"geometry":{"type":"Point","coordinates":[46.7261056,24.8943128]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":270},"geometry":{"type":"Point","coordinates":[46.7261056,24.8944044]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":270},"geometry":{"type":"Point","coordinates":[46.7261056,24.8944502]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":270},"geometry":{"type":"Point","coordinates":[46.7261056,24.8946564]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":270},"geometry":{"type":"Point","coordinates":[46.7261056,24.8946793]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":270},"geometry":{"type":"Point","coordinates":[46.7261056,24.8947938]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":270},"geometry":{"type":"Point","coordinates":[46.7261056,24.8948167]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":270},"geometry":{"type":"Point","coordinates":[46.7261056,24.8949542]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":270},"geometry":{"type":"Point","coordinates":[46.7261056,24.8950687]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":270},"geometry":{"type":"Point","coordinates":[46.7261056,24.8954352]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":270},"geometry":{"type":"Point","coordinates":[46.7261056,24.8955956]}},{"type":"Feature","properties":{"model":"Taxi","heading":270},"geometry":{"type":"Point","coordinates":[46.7261056,24.8956414]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":270},"geometry":{"type":"Point","coordinates":[46.7261056,24.8956643]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":270},"geometry":{"type":"Point","coordinates":[46.7261056,24.8956872]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":270},"geometry":{"type":"Point","coordinates":[46.7261056,24.8957788]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":90},"geometry":{"type":"Point","coordinates":[46.7047659,24.8957559]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":90},"geometry":{"type":"Point","coordinates":[46.7047659,24.895733]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":90},"geometry":{"type":"Point","coordinates":[46.7047659,24.8956872]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":90},"geometry":{"type":"Point","coordinates":[46.7047659,24.8956643]}},{"type":"Feature","properties":{"model":"Taxi","heading":90},"geometry":{"type":"Point","coordinates":[46.7047659,24.8956414]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":90},"geometry":{"type":"Point","coordinates":[46.7047659,24.8954123]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":90},"geometry":{"type":"Point","coordinates":[46.7047659,24.8953894]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":90},"geometry":{"type":"Point","coordinates":[46.7047659,24.895252]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":90},"geometry":{"type":"Point","coordinates":[46.7047659,24.8952291]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":90},"geometry":{"type":"Point","coordinates":[46.7047659,24.8952062]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":90},"geometry":{"type":"Point","coordinates":[46.7047659,24.8949313]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":90},"geometry":{"type":"Point","coordinates":[46.7047659,24.8947709]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":90},"geometry":{"type":"Point","coordinates":[46.7047659,24.894748]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":90},"geometry":{"type":"Point","coordinates":[46.7047659,24.8945877]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":90},"geometry":{"type":"Point","coordinates":[46.7047659,24.8943586]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":90},"geometry":{"type":"Point","coordinates":[46.7047659,24.8943357]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":90},"geometry":{"type":"Point","coordinates":[46.7047659,24.8941983]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":270},"geometry":{"type":"Point","coordinates":[46.7046054,24.8958247]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":270},"geometry":{"type":"Point","coordinates":[46.7046054,24.8954123]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":270},"geometry":{"type":"Point","coordinates":[46.7046054,24.8953665]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":270},"geometry":{"type":"Point","coordinates":[46.7046054,24.8950687]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":270},"geometry":{"type":"Point","coordinates":[46.7046054,24.8949771]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":270},"geometry":{"type":"Point","coordinates":[46.7046054,24.8949313]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":270},"geometry":{"type":"Point","coordinates":[46.7046054,24.8949084]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":270},"geometry":{"type":"Point","coordinates":[46.7046054,24.8947709]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":270},"geometry":{"type":"Point","coordinates":[46.7046054,24.894748]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":270},"geometry":{"type":"Point","coordinates":[46.7046054,24.8947251]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":270},"geometry":{"type":"Point","coordinates":[46.7046054,24.8946564]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":270},"geometry":{"type":"Point","coordinates":[46.7046054,24.8945648]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":270},"geometry":{"type":"Point","coordinates":[46.7046054,24.8945419]}},{"type":"Feature","properties":{"model":"Taxi","heading":270},"geometry":{"type":"Point","coordinates":[46.7046054,24.8944044]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":270},"geometry":{"type":"Point","coordinates":[46.7046054,24.8943357]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":270},"geometry":{"type":"Point","coordinates":[46.7046054,24.8942899]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":270},"geometry":{"type":"Point","coordinates":[46.7046054,24.894267]}},{"type":"Feature","properties":{"model":"Taxi","heading":90},"geometry":{"type":"Point","coordinates":[46.704548,24.8958247]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":90},"geometry":{"type":"Point","coordinates":[46.704548,24.8957788]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":90},"geometry":{"type":"Point","coordinates":[46.704548,24.8955956]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":90},"geometry":{"type":"Point","coordinates":[46.704548,24.8955727]}},{"type":"Feature","properties":{"model":"Taxi","heading":90},"geometry":{"type":"Point","coordinates":[46.704548,24.8954352]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":90},"geometry":{"type":"Point","coordinates":[46.704548,24.8953665]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":90},"geometry":{"type":"Point","coordinates":[46.704548,24.8952749]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":90},"geometry":{"type":"Point","coordinates":[46.704548,24.895252]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":90},"geometry":{"type":"Point","coordinates":[46.704548,24.8951603]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":90},"geometry":{"type":"Point","coordinates":[46.704548,24.8949542]}},{"type":"Feature","properties":{"model":"Taxi","heading":90},"geometry":{"type":"Point","coordinates":[46.704548,24.8949313]}},{"type":"Feature","properties":{"model":"Taxi","heading":90},"geometry":{"type":"Point","coordinates":[46.704548,24.8949084]}},{"type":"Feature","properties":{"model":"Taxi","heading":90},"geometry":{"type":"Point","coordinates":[46.704548,24.8947938]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":90},"geometry":{"type":"Point","coordinates":[46.704548,24.8947022]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":90},"geometry":{"type":"Point","coordinates":[46.704548,24.894496]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":90},"geometry":{"type":"Point","coordinates":[46.704548,24.8944044]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":90},"geometry":{"type":"Point","coordinates":[46.704548,24.894267]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":90},"geometry":{"type":"Point","coordinates":[46.704548,24.8942441]}},{"type":"Feature","properties":{"model":"Taxi","heading":90},"geometry":{"type":"Point","coordinates":[46.704548,24.8942212]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":270},"geometry":{"type":"Point","coordinates":[46.7043876,24.8958017]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":270},"geometry":{"type":"Point","coordinates":[46.7043876,24.8957788]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":270},"geometry":{"type":"Point","coordinates":[46.7043876,24.895733]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":270},"geometry":{"type":"Point","coordinates":[46.7043876,24.8956872]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":270},"geometry":{"type":"Point","coordinates":[46.7043876,24.8954123]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":270},"geometry":{"type":"Point","coordinates":[46.7043876,24.8951603]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":270},"geometry":{"type":"Point","coordinates":[46.7043876,24.8950916]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":270},"geometry":{"type":"Point","coordinates":[46.7043876,24.8950458]}},{"type":"Feature","properties":{"model":"Taxi","heading":270},"geometry":{"type":"Point","coordinates":[46.7043876,24.8950229]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":270},"geometry":{"type":"Point","coordinates":[46.7043876,24.8949313]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":270},"geometry":{"type":"Point","coordinates":[46.7043876,24.8948855]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":270},"geometry":{"type":"Point","coordinates":[46.7043876,24.8948626]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":270},"geometry":{"type":"Point","coordinates":[46.7043876,24.8948397]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":270},"geometry":{"type":"Point","coordinates":[46.7043876,24.8948167]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":270},"geometry":{"type":"Point","coordinates":[46.7043876,24.8945877]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":270},"geometry":{"type":"Point","coordinates":[46.7043876,24.8944273]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":270},"geometry":{"type":"Point","coordinates":[46.7043876,24.8942441]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":90},"geometry":{"type":"Point","coordinates":[46.7043301,24.8958017]}},{"type":"Feature","properties":{"model":"Taxi","heading":90},"geometry":{"type":"Point","coordinates":[46.7043301,24.895504]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":90},"geometry":{"type":"Point","coordinates":[46.7043301,24.8954352]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":90},"geometry":{"type":"Point","coordinates":[46.7043301,24.8954123]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":90},"geometry":{"type":"Point","coordinates":[46.7043301,24.8953665]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":90},"geometry":{"type":"Point","coordinates":[46.7043301,24.8953436]}},{"type":"Feature","properties":{"model":"Taxi","heading":90},"geometry":{"type":"Point","coordinates":[46.7043301,24.8952291]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":90},"geometry":{"type":"Point","coordinates":[46.7043301,24.8950687]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":90},"geometry":{"type":"Point","coordinates":[46.7043301,24.8950458]}},{"type":"Feature","properties":{"model":"Taxi","heading":90},"geometry":{"type":"Point","coordinates":[46.7043301,24.8950229]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":90},"geometry":{"type":"Point","coordinates":[46.7043301,24.895]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":90},"geometry":{"type":"Point","coordinates":[46.7043301,24.8949084]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":90},"geometry":{"type":"Point","coordinates":[46.7043301,24.8948855]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":90},"geometry":{"type":"Point","coordinates":[46.7043301,24.8947938]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":90},"geometry":{"type":"Point","coordinates":[46.7043301,24.894748]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":90},"geometry":{"type":"Point","coordinates":[46.7043301,24.8947251]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":90},"geometry":{"type":"Point","coordinates":[46.7043301,24.8945648]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":90},"geometry":{"type":"Point","coordinates":[46.7043301,24.8943357]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":90},"geometry":{"type":"Point","coordinates":[46.7043301,24.894267]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":90},"geometry":{"type":"Point","coordinates":[46.7043301,24.8942441]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":90},"geometry":{"type":"Point","coordinates":[46.7043301,24.8942212]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":270},"geometry":{"type":"Point","coordinates":[46.7041697,24.8958017]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":270},"geometry":{"type":"Point","coordinates":[46.7041697,24.8957559]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":270},"geometry":{"type":"Point","coordinates":[46.7041697,24.8957101]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":270},"geometry":{"type":"Point","coordinates":[46.7041697,24.8956872]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":270},"geometry":{"type":"Point","coordinates":[46.7041697,24.8954352]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":270},"geometry":{"type":"Point","coordinates":[46.7041697,24.8953436]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":270},"geometry":{"type":"Point","coordinates":[46.7041697,24.8953207]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":270},"geometry":{"type":"Point","coordinates":[46.7041697,24.8952978]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":270},"geometry":{"type":"Point","coordinates":[46.7041697,24.8952291]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":270},"geometry":{"type":"Point","coordinates":[46.7041697,24.8952062]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":270},"geometry":{"type":"Point","coordinates":[46.7041697,24.8951833]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":270},"geometry":{"type":"Point","coordinates":[46.7041697,24.8951374]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":270},"geometry":{"type":"Point","coordinates":[46.7041697,24.8950458]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":270},"geometry":{"type":"Point","coordinates":[46.7041697,24.8948855]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":270},"geometry":{"type":"Point","coordinates":[46.7041697,24.894748]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":270},"geometry":{"type":"Point","coordinates":[46.7041697,24.8946335]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":270},"geometry":{"type":"Point","coordinates":[46.7041697,24.8945877]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":270},"geometry":{"type":"Point","coordinates":[46.7041697,24.8944731]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":270},"geometry":{"type":"Point","coordinates":[46.7041697,24.8944273]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":270},"geometry":{"type":"Point","coordinates":[46.7041697,24.8943357]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":270},"geometry":{"type":"Point","coordinates":[46.7041697,24.8942899]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":270},"geometry":{"type":"Point","coordinates":[46.7041697,24.8941753]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":90},"geometry":{"type":"Point","coordinates":[46.7041122,24.8957788]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":90},"geometry":{"type":"Point","coordinates":[46.7041122,24.895733]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":90},"geometry":{"type":"Point","coordinates":[46.7041122,24.8955956]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":90},"geometry":{"type":"Point","coordinates":[46.7041122,24.8954581]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":90},"geometry":{"type":"Point","coordinates":[46.7041122,24.8954352]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":90},"geometry":{"type":"Point","coordinates":[46.7041122,24.8953665]}},{"type":"Feature","properties":{"model":"Taxi","heading":90},"geometry":{"type":"Point","coordinates":[46.7041122,24.8953436]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":90},"geometry":{"type":"Point","coordinates":[46.7041122,24.8952749]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":90},"geometry":{"type":"Point","coordinates":[46.7041122,24.8952291]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":90},"geometry":{"type":"Point","coordinates":[46.7041122,24.8950916]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":90},"geometry":{"type":"Point","coordinates":[46.7041122,24.8948397]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":90},"geometry":{"type":"Point","coordinates":[46.7041122,24.8948167]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":90},"geometry":{"type":"Point","coordinates":[46.7041122,24.894748]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":90},"geometry":{"type":"Point","coordinates":[46.7041122,24.8947022]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":90},"geometry":{"type":"Point","coordinates":[46.7041122,24.8944502]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":90},"geometry":{"type":"Point","coordinates":[46.7041122,24.8943815]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":90},"geometry":{"type":"Point","coordinates":[46.7041122,24.894267]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":270},"geometry":{"type":"Point","coordinates":[46.7039518,24.8958247]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":270},"geometry":{"type":"Point","coordinates":[46.7039518,24.8957559]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":270},"geometry":{"type":"Point","coordinates":[46.7039518,24.8955269]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":270},"geometry":{"type":"Point","coordinates":[46.7039518,24.8954123]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":270},"geometry":{"type":"Point","coordinates":[46.7039518,24.8953894]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":270},"geometry":{"type":"Point","coordinates":[46.7039518,24.8952749]}},{"type":"Feature","properties":{"model":"Tesla_P7","heading":270},"geometry":{"type":"Point","coordinates":[46.7039518,24.8951603]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":270},"geometry":{"type":"Point","coordinates":[46.7039518,24.8951145]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":270},"geometry":{"type":"Point","coordinates":[46.7039518,24.8950916]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":270},"geometry":{"type":"Point","coordinates":[46.7039518,24.8948167]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":270},"geometry":{"type":"Point","coordinates":[46.7039518,24.8947938]}},{"type":"Feature","properties":{"model":"Taxi","heading":270},"geometry":{"type":"Point","coordinates":[46.7039518,24.8947022]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":270},"geometry":{"type":"Point","coordinates":[46.7039518,24.8946793]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":270},"geometry":{"type":"Point","coordinates":[46.7039518,24.8946335]}},{"type":"Feature","properties":{"model":"Taxi","heading":270},"geometry":{"type":"Point","coordinates":[46.7039518,24.8944273]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":270},"geometry":{"type":"Point","coordinates":[46.7039518,24.8942899]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":270},"geometry":{"type":"Point","coordinates":[46.7039518,24.894267]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":270},"geometry":{"type":"Point","coordinates":[46.7039518,24.8941753]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.8958247]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.8957788]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.895733]}},{"type":"Feature","properties":{"model":"Ford_Fusion","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.8957101]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.8956872]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.8956643]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.8955269]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.895504]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.8954581]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.8953894]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.8953436]}},{"type":"Feature","properties":{"model":"Ford_Edge","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.895252]}},{"type":"Feature","properties":{"model":"Audi_A6","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.8952291]}},{"type":"Feature","properties":{"model":"Mercedes_S-Class","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.8951603]}},{"type":"Feature","properties":{"model":"Toyota_Prius","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.8950458]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.895]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.8949542]}},{"type":"Feature","properties":{"model":"Taxi","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.8948167]}},{"type":"Feature","properties":{"model":"Ford_Expedition","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.8947938]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.8947709]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.8946793]}},{"type":"Feature","properties":{"model":"Taxi","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.8946335]}},{"type":"Feature","properties":{"model":"BMW_3-Series","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.8944731]}},{"type":"Feature","properties":{"model":"Pickup_Truck_Toyota_Hilux","heading":90},"geometry":{"type":"Point","coordinates":[46.7038944,24.8944044]}}]}
+{
+  "type": "FeatureCollection",
+  "name": "vehicles",
+  "metadata": {
+    "source": "Synthetic demo data – illustrative layout, not the official masterplan",
+    "generated": "2026-11-12"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7252341,
+          24.8941983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7252341,
+          24.8942212
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7252341,
+          24.894267
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7252341,
+          24.8942899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7252341,
+          24.8943357
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7252341,
+          24.8943586
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7252341,
+          24.8943815
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7252341,
+          24.894519
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7252341,
+          24.8947709
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7252341,
+          24.8948167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7252341,
+          24.8950687
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7252341,
+          24.8951145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7252341,
+          24.8951603
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7252341,
+          24.8951833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7252341,
+          24.8952749
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7252341,
+          24.8953665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7252341,
+          24.895504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7252341,
+          24.8955956
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7252341,
+          24.8956185
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7252341,
+          24.8956414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7252341,
+          24.895733
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7252341,
+          24.8957788
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7253946,
+          24.894267
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7253946,
+          24.8943128
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7253946,
+          24.8943815
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7253946,
+          24.894496
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7253946,
+          24.8945419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7253946,
+          24.894748
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7253946,
+          24.8948397
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7253946,
+          24.8948855
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7253946,
+          24.8949084
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7253946,
+          24.8951145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7253946,
+          24.8951833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7253946,
+          24.8952291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7253946,
+          24.895252
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7253946,
+          24.8953207
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7253946,
+          24.8955269
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7253946,
+          24.8956872
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7253946,
+          24.8957101
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7253946,
+          24.895733
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7253946,
+          24.8957788
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7253946,
+          24.8958017
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.725452,
+          24.8941753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.725452,
+          24.8942441
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.725452,
+          24.8943357
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.725452,
+          24.8943586
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.725452,
+          24.8943815
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.725452,
+          24.8944273
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.725452,
+          24.8945419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.725452,
+          24.8946335
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.725452,
+          24.8946564
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.725452,
+          24.8947022
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.725452,
+          24.8949542
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.725452,
+          24.8949771
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.725452,
+          24.8950229
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.725452,
+          24.8952062
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.725452,
+          24.8953207
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.725452,
+          24.8953665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.725452,
+          24.8954352
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.725452,
+          24.895481
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.8942441
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.8943128
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.8943586
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.8945419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.8945648
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.8945877
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.8946335
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.8946793
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.8947938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.8948167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.8948855
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.8949084
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.8950229
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.8950916
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.8951145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.895252
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.8953665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.8953894
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.8954123
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.8954581
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.895504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.8955498
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.8955727
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256124,
+          24.8955956
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256699,
+          24.8941753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256699,
+          24.8942212
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256699,
+          24.8942899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256699,
+          24.8943586
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256699,
+          24.8944502
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256699,
+          24.8945648
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256699,
+          24.8945877
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256699,
+          24.8946564
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256699,
+          24.8947938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256699,
+          24.8948397
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256699,
+          24.8948626
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256699,
+          24.8950687
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256699,
+          24.8952291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256699,
+          24.8952978
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256699,
+          24.8953894
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256699,
+          24.8954123
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256699,
+          24.8955498
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256699,
+          24.8956414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256699,
+          24.8956643
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256699,
+          24.8956872
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7256699,
+          24.8958247
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258303,
+          24.8941753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258303,
+          24.8941983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258303,
+          24.8942441
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258303,
+          24.8942899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258303,
+          24.8943357
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258303,
+          24.8945419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258303,
+          24.8945877
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258303,
+          24.8946564
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258303,
+          24.8947251
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258303,
+          24.8948855
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258303,
+          24.8949313
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258303,
+          24.895
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258303,
+          24.8950458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258303,
+          24.8951145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258303,
+          24.8952978
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258303,
+          24.8953207
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258303,
+          24.8953894
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258303,
+          24.895481
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258303,
+          24.895504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258303,
+          24.8956643
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258878,
+          24.8942899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258878,
+          24.8944731
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258878,
+          24.8947022
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258878,
+          24.8947251
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258878,
+          24.894748
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258878,
+          24.8947709
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258878,
+          24.8947938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258878,
+          24.8949084
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258878,
+          24.8949771
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258878,
+          24.8952062
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258878,
+          24.8952749
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258878,
+          24.8952978
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258878,
+          24.8953207
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258878,
+          24.8956414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258878,
+          24.8956643
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258878,
+          24.8956872
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258878,
+          24.8957788
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7258878,
+          24.8958247
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7260482,
+          24.894519
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7260482,
+          24.894748
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7260482,
+          24.8949542
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7260482,
+          24.8950687
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7260482,
+          24.8952291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7260482,
+          24.8952978
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7260482,
+          24.8953436
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7260482,
+          24.8954581
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7260482,
+          24.895504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7260482,
+          24.8957788
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7261056,
+          24.8943128
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7261056,
+          24.8944044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7261056,
+          24.8944502
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7261056,
+          24.8946564
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7261056,
+          24.8946793
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7261056,
+          24.8947938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7261056,
+          24.8948167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7261056,
+          24.8949542
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7261056,
+          24.8950687
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7261056,
+          24.8954352
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7261056,
+          24.8955956
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7261056,
+          24.8956414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7261056,
+          24.8956643
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7261056,
+          24.8956872
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7261056,
+          24.8957788
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7047659,
+          24.8957559
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7047659,
+          24.895733
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7047659,
+          24.8956872
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7047659,
+          24.8956643
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7047659,
+          24.8956414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7047659,
+          24.8954123
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7047659,
+          24.8953894
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7047659,
+          24.895252
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7047659,
+          24.8952291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7047659,
+          24.8952062
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7047659,
+          24.8949313
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7047659,
+          24.8947709
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7047659,
+          24.894748
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7047659,
+          24.8945877
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7047659,
+          24.8943586
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7047659,
+          24.8943357
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7047659,
+          24.8941983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7046054,
+          24.8958247
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7046054,
+          24.8954123
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7046054,
+          24.8953665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7046054,
+          24.8950687
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7046054,
+          24.8949771
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7046054,
+          24.8949313
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7046054,
+          24.8949084
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7046054,
+          24.8947709
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7046054,
+          24.894748
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7046054,
+          24.8947251
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7046054,
+          24.8946564
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7046054,
+          24.8945648
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7046054,
+          24.8945419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7046054,
+          24.8944044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7046054,
+          24.8943357
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7046054,
+          24.8942899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7046054,
+          24.894267
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.704548,
+          24.8958247
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.704548,
+          24.8957788
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.704548,
+          24.8955956
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.704548,
+          24.8955727
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.704548,
+          24.8954352
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.704548,
+          24.8953665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.704548,
+          24.8952749
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.704548,
+          24.895252
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.704548,
+          24.8951603
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.704548,
+          24.8949542
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.704548,
+          24.8949313
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.704548,
+          24.8949084
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.704548,
+          24.8947938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.704548,
+          24.8947022
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.704548,
+          24.894496
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.704548,
+          24.8944044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.704548,
+          24.894267
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.704548,
+          24.8942441
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.704548,
+          24.8942212
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043876,
+          24.8958017
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043876,
+          24.8957788
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043876,
+          24.895733
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043876,
+          24.8956872
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043876,
+          24.8954123
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043876,
+          24.8951603
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043876,
+          24.8950916
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043876,
+          24.8950458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043876,
+          24.8950229
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043876,
+          24.8949313
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043876,
+          24.8948855
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043876,
+          24.8948626
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043876,
+          24.8948397
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043876,
+          24.8948167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043876,
+          24.8945877
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043876,
+          24.8944273
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043876,
+          24.8942441
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043301,
+          24.8958017
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043301,
+          24.895504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043301,
+          24.8954352
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043301,
+          24.8954123
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043301,
+          24.8953665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043301,
+          24.8953436
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043301,
+          24.8952291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043301,
+          24.8950687
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043301,
+          24.8950458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043301,
+          24.8950229
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043301,
+          24.895
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043301,
+          24.8949084
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043301,
+          24.8948855
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043301,
+          24.8947938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043301,
+          24.894748
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043301,
+          24.8947251
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043301,
+          24.8945648
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043301,
+          24.8943357
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043301,
+          24.894267
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043301,
+          24.8942441
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7043301,
+          24.8942212
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041697,
+          24.8958017
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041697,
+          24.8957559
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041697,
+          24.8957101
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041697,
+          24.8956872
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041697,
+          24.8954352
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041697,
+          24.8953436
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041697,
+          24.8953207
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041697,
+          24.8952978
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041697,
+          24.8952291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041697,
+          24.8952062
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041697,
+          24.8951833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041697,
+          24.8951374
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041697,
+          24.8950458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041697,
+          24.8948855
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041697,
+          24.894748
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041697,
+          24.8946335
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041697,
+          24.8945877
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041697,
+          24.8944731
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041697,
+          24.8944273
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041697,
+          24.8943357
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041697,
+          24.8942899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041697,
+          24.8941753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041122,
+          24.8957788
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041122,
+          24.895733
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041122,
+          24.8955956
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041122,
+          24.8954581
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041122,
+          24.8954352
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041122,
+          24.8953665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041122,
+          24.8953436
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041122,
+          24.8952749
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041122,
+          24.8952291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041122,
+          24.8950916
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041122,
+          24.8948397
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041122,
+          24.8948167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041122,
+          24.894748
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041122,
+          24.8947022
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041122,
+          24.8944502
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041122,
+          24.8943815
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7041122,
+          24.894267
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7039518,
+          24.8958247
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7039518,
+          24.8957559
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7039518,
+          24.8955269
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7039518,
+          24.8954123
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7039518,
+          24.8953894
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7039518,
+          24.8952749
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Tesla_P7",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7039518,
+          24.8951603
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7039518,
+          24.8951145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7039518,
+          24.8950916
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7039518,
+          24.8948167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7039518,
+          24.8947938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7039518,
+          24.8947022
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7039518,
+          24.8946793
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7039518,
+          24.8946335
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7039518,
+          24.8944273
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7039518,
+          24.8942899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7039518,
+          24.894267
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7039518,
+          24.8941753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.8958247
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.8957788
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.895733
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Fusion",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.8957101
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.8956872
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.8956643
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.8955269
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.895504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.8954581
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.8953894
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.8953436
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Edge",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.895252
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Audi_A6",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.8952291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Mercedes_S-Class",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.8951603
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Toyota_Prius",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.8950458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.895
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.8949542
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.8948167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Ford_Expedition",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.8947938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.8947709
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.8946793
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Taxi",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.8946335
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "BMW_3-Series",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.8944731
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "Pickup_Truck_Toyota_Hilux",
+        "heading": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.7038944,
+          24.8944044
+        ]
+      }
+    }
+  ]
+}

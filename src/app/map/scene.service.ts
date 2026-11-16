@@ -11,9 +11,9 @@ import { sleep } from '../core/geo';
 import { LightMode, LonLat, RenderMode, WeatherMode } from '../core/models';
 import { StateService } from '../core/state.service';
 import { ToastService } from '../core/toast.service';
-import { PlotSelectionService } from '../plots/plot-selection.service';
 import { LayersService } from './layers.service';
 import { PAVILION_RENDERER } from './pavilion-renderer';
+import { SCENE_HOOKS } from './scene-hooks';
 
 const SR = { wkid: 4326 };
 
@@ -49,7 +49,6 @@ export class SceneService {
   private readonly state = inject(StateService);
   private readonly layers = inject(LayersService);
   private readonly toast = inject(ToastService);
-  private readonly plots = inject(PlotSelectionService);
   private readonly injector = inject(Injector);
 
   map: EsriMap | null = null;
@@ -68,10 +67,22 @@ export class SceneService {
   private timers: ReturnType<typeof setTimeout>[] = [];
   private hovering = false;
 
+  /**
+   * Updates the loader text and spinner state.
+   *
+   * @param text Message to display on the loading overlay.
+   * @param spinner Whether to show the spinning indicator.
+   */
   private setLoader(text: string, spinner = true): void {
     this.loader.update(l => ({ ...l, text, spinner }));
   }
 
+  /**
+   * Initializes the 3D scene view inside the specified container element.
+   * Catches and displays any fatal startup errors.
+   *
+   * @param container DOM div element hosting the ArcGIS SceneView.
+   */
   async boot(container: HTMLDivElement): Promise<void> {
     try {
       await this.doBoot(container);
@@ -81,6 +92,12 @@ export class SceneService {
     }
   }
 
+  /**
+   * Internal boot implementation: configures API key, loads site database, instantiates EsriMap,
+   * creates SceneView, initializes layers, attaches hover/click listeners, and hides the loader.
+   *
+   * @param container DOM div element hosting the SceneView.
+   */
   private async doBoot(container: HTMLDivElement): Promise<void> {
     if (environment.arcgisApiKey) esriConfig.apiKey = environment.arcgisApiKey;
     this.setLoader('Loading the site database…');
@@ -90,7 +107,7 @@ export class SceneService {
     const map = (this.map = new EsriMap({ basemap: this.state.basemap(), ground: new Ground() }));
     const g = D.site.globe;
     const view = (this.view = new SceneView({
-      container, map, qualityProfile: 'high', viewingMode: 'global',
+      container, map, qualityProfile: 'medium', viewingMode: 'global',
       camera: { position: { x: g[0] - 0.004, y: g[1] - 0.028, z: 2300, spatialReference: SR }, heading: 8, tilt: 52 },
       environment: { lighting: { type: 'sun', date: new Date(Date.UTC(2030, 10, 15, 7, 30)), directShadowsEnabled: true, displayUTCOffset: 3 }, atmosphereEnabled: true, starsEnabled: false },
       popupEnabled: false, ui: { components: ['attribution', 'zoom', 'navigation-toggle', 'compass'] }
@@ -108,7 +125,10 @@ export class SceneService {
     }));
     this.handles.push(view.on('pointer-move', ev => this.hoverCursor(ev, container)));
 
-    this.plots.initDefault();
+    const hooks = this.injector.get(SCENE_HOOKS);
+    hooks.afterLayers();
+    // 'immediate-click': plain 'click' is held back ~250 ms by ArcGIS to rule out a double-click
+    this.handles.push(view.on('immediate-click', ev => void hooks.click(ev).catch(e => console.warn(e))));
 
     await view.when();
     this.readyResolve(view);
@@ -120,6 +140,12 @@ export class SceneService {
     this.timers.push(setTimeout(() => this.toast.show('Tip: click any building to open it in 3D with its floor plans · try ✨ Imagine you\'re here'), 2500));
   }
 
+  /**
+   * Tests for graphics under the pointer and toggles the cursor between pointer and default.
+   *
+   * @param ev Pointer move event.
+   * @param container DOM div element containing the SceneView.
+   */
   private hoverCursor(ev: __esri.ViewPointerMoveEvent, container: HTMLDivElement): void {
     const view = this.view, L = this.layers;
     if (!view || this.state.cinema() || this.hovering) return;
@@ -130,33 +156,70 @@ export class SceneService {
       .then(() => setTimeout(() => (this.hovering = false), 80));
   }
 
-  /** Camera flight (reference `E.fly`). */
+  /**
+   * Animates the 3D scene camera to a target location, zoom, or camera configuration.
+   *
+   * @param target Target point, camera, or geometry.
+   * @param ms Animation duration in milliseconds (default 1800ms).
+   * @returns Promise resolving when flight completes.
+   */
   fly(target: __esri.GoToTarget3D, ms?: number): Promise<void> {
     if (!this.view) return Promise.resolve();
-    return this.view.goTo(target, { duration: ms || 1800 }).catch(() => undefined);
+    return this.view.goTo(target, { duration: ms || 900 }).catch(() => undefined);
   }
 
+  /**
+   * Creates an ArcGIS Point geometry from longitude, latitude, and optional elevation in meters.
+   *
+   * @param p [longitude, latitude] coordinate pair.
+   * @param z Altitude/elevation in meters (default 0).
+   * @returns Point geometry in WGS84 spatial reference.
+   */
   pt(p: readonly number[], z = 0): Point {
     return new Point({ x: p[0], y: p[1], z, spatialReference: SR });
   }
 
-  /** Fly to a district block (reference district chip). */
+  /** Descriptive alias for {@link pt}. */
+  createPoint(p: readonly number[], z = 0): Point {
+    return this.pt(p, z);
+  }
+
+  /**
+   * Smoothly animates the camera to frame a specific district block.
+   *
+   * @param center [longitude, latitude] center of the district.
+   * @returns Promise resolving when flight completes.
+   */
   flyToDistrict(center: LonLat): Promise<void> {
     return this.fly({ target: this.pt(center), zoom: 16.8, tilt: 55, heading: 0 });
   }
 
-  /** Back to the start overview camera. */
+  /**
+   * Resets the camera back to the default high-angle site overview facing north.
+   *
+   * @returns Promise resolving when camera animation completes.
+   */
   resetView(): Promise<void> {
     const g = this.data.d.site.globe;
     return this.fly({ position: { x: g[0] - 0.004, y: g[1] - 0.028, z: 2300, spatialReference: SR }, heading: 8, tilt: 52 } as __esri.GoToTarget3D, 2000);
   }
 
-  /** Sun position: minutes after local midnight (Riyadh, UTC+3), mid-November. */
+  /**
+   * Adjusts the virtual sun position by minutes after midnight (UTC+3 Riyadh time).
+   *
+   * @param mins Number of minutes past midnight (e.g. 630 = 10:30 AM).
+   */
   setSunTime(mins: number): void {
     const lighting = this.view?.environment.lighting;
     if (lighting && 'date' in lighting) lighting.date = new Date(Date.UTC(2030, 10, 15, 0, 0) + (mins - 180) * 60000);
   }
 
+  /**
+   * Applies lighting mode preset (day, sunset, or night) adjusting sun angle, stars, and night streetlights.
+   *
+   * @param mode Selected lighting mode.
+   * @param silent Whether to suppress user toast notification.
+   */
   applyLight(mode: LightMode, silent = false): void {
     this.state.light.set(mode);
     const view = this.view;
@@ -169,6 +232,11 @@ export class SceneService {
     if (!silent && mode === 'night') this.toast.show('Night mode: street lights and pavilion lighting on');
   }
 
+  /**
+   * Sets the visual render mode across the digital twin (realistic, blueprint, or sketch).
+   *
+   * @param mode Render style mode.
+   */
   setStyle(mode: RenderMode): void {
     if (!this.map || !this.view) return;
     this.layers.applyStyle(mode);
@@ -178,6 +246,11 @@ export class SceneService {
     this.view.environment.atmosphereEnabled = mode !== 'blueprint';
   }
 
+  /**
+   * Updates atmospheric weather conditions (sunny, cloudy, rainy, or foggy).
+   *
+   * @param w Weather mode preset.
+   */
   setWeather(w: WeatherMode): void {
     this.state.weather.set(w);
     if (!this.view) return;
@@ -189,11 +262,19 @@ export class SceneService {
     if (w === 'foggy') this.toast.show('Dust haze – plan shaded routes and HVAC filters');
   }
 
+  /**
+   * Changes the active basemap layer on the 3D globe.
+   *
+   * @param id Basemap identifier (e.g. 'satellite', 'osm', 'dark-gray-vector').
+   */
   setBasemap(id: string): void {
     this.state.basemap.set(id);
     if (this.map && this.layers.mode() === 'realistic') this.map.basemap = id;
   }
 
+  /**
+   * Captures a high-resolution 2400px PNG screenshot of the current SceneView and prompts download.
+   */
   async screenshot(): Promise<void> {
     if (!this.view) return;
     try {
@@ -208,6 +289,9 @@ export class SceneService {
     }
   }
 
+  /**
+   * Cleans up event listeners, active timers, layers, and destroys the SceneView.
+   */
   destroy(): void {
     this.handles.forEach(h => h.remove());
     this.handles = [];

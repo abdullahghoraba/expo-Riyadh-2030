@@ -1,0 +1,45 @@
+<div id="cinema" [class.hidden]="!state.cinema()" [attr.lang]="state.lang()" [attr.dir]="state.lang() === 'ar' ? 'rtl' : 'ltr'">
+  <div class="cin-top">
+    <div class="cin-brand"><span class="mark">✕✕</span> <bdi dir="ltr" lang="en">EXPO 2030 RIYADH</bdi> <em id="cinMode">{{ modeLabel() }}</em></div>
+    <div class="cin-dots" id="cinDots">
+      @for (d of dots(); track $index) {
+        <i [class]="d"></i>
+      }
+    </div>
+    <div class="cin-ctrl">
+      <div class="seg small dark" id="cinLang" dir="ltr">
+        <button type="button" lang="en" [class.on]="state.lang() === 'en'" (click)="setLang('en')">English</button><button type="button" lang="ar" dir="rtl" [class.on]="state.lang() === 'ar'" (click)="setLang('ar')">العربية</button>
+      </div>
+      <select id="cinVoice" [attr.aria-label]="state.lang() === 'ar' ? 'صوت الراوي' : 'Narrator voice'" [value]="audio.selectedVoice()" (change)="audio.selectedVoice.set($any($event.target).value)">
+        <option value="">{{ state.lang() === 'ar' ? 'الصوت العربي التلقائي' : 'Automatic English voice' }}</option>
+        @for (voice of audio.neuralVoices(); track voice.id) {
+          @if (voice.lang === state.lang()) {
+            <option [value]="'neural:' + voice.id" dir="ltr">★ {{ voice.name }}</option>
+          }
+        }
+        @for (voice of audio.languageVoices(); track voice.voiceURI) {
+          <option [value]="voice.voiceURI" dir="auto">{{ voice.name }} ({{ voice.lang }})</option>
+        }
+      </select>
+      <button type="button" id="cinMute" [attr.aria-label]="state.lang() === 'ar' ? 'كتم أو تشغيل الصوت' : 'Toggle narration audio'" (click)="audio.toggleMute()">{{ audio.muted() ? '🔇' : '🔊' }}</button>
+      <button type="button" id="cinStop" (click)="imagine.stop()">✕ {{ state.lang() === 'ar' ? 'خروج' : 'Exit' }}</button>
+    </div>
+  </div>
+  <div class="cin-bottom">
+    <div id="subtitle" [class.show]="imagine.subtitle().show" [attr.dir]="imagine.subtitle().rtl ? 'rtl' : 'ltr'" [attr.lang]="imagine.subtitle().rtl ? 'ar' : 'en'">{{ imagine.subtitle().text }}</div>
+  </div>
+</div>
+@if (imagine.cta(); as c) {
+  <div id="cta" [attr.lang]="c.lang" [attr.dir]="c.lang === 'ar' ? 'rtl' : 'ltr'">
+    <div class="cta-box">
+      <div class="cta-kicker">{{ c.lang === 'ar' ? 'مكانك في إكسبو 2030' : 'YOUR PLACE AT EXPO 2030' }}</div>
+      <h2 id="ctaTitle">{{ c.title }}</h2>
+      <p id="ctaSub">{{ c.sub }}<br>{{ c.detail }}</p>
+      <div class="row-btns center">
+        <button type="button" class="btn primary" id="ctaSubmit" (click)="imagine.ctaSubmit()">{{ c.submitLabel }}</button>
+        <button type="button" class="btn" id="ctaReplay" (click)="imagine.ctaReplay()">↻ {{ c.lang === 'ar' ? 'إعادة العرض' : 'Replay' }}</button>
+        <button type="button" class="btn ghost" id="ctaClose" (click)="imagine.ctaClose()">{{ c.lang === 'ar' ? 'استكشاف' : 'Explore' }}</button>
+      </div>
+    </div>
+  </div>
+}

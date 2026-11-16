@@ -1,0 +1,25 @@
+:host { display: contents; }
+
+.plots { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px }
+.plot { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; font-size: 12.5px; background: #fff; text-align: start; position: relative }
+.plot b { display: block; margin-bottom: 5px; font-size: 13px }
+.plot.taken { color: #9aa3a0; cursor: not-allowed; background: #fafbfa }
+.plot.sel { background: var(--sel); border: 2px solid var(--selb); padding: 9px 11px }
+.plot.sel:after { content: "✓"; position: absolute; right: 10px; top: 8px; color: var(--selb) }
+.plot.pending { border-color: #e8912d }
+.plot .tag { font-size: 10px; background: #fde3c3; color: #8a4b00; border-radius: 8px; padding: 1px 6px; margin-left: 4px }
+.near { border: 1px solid var(--line); border-radius: 12px; margin-top: 12px; padding: 10px }
+.near-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; font-size: 13px }
+.poi { display: flex; align-items: center; gap: 10px; padding: 7px 8px; border-radius: 9px; cursor: pointer; font-size: 12.5px }
+.poi:hover { background: #f0f5f1 }
+.poi.sel { background: var(--sel); outline: 1.5px solid var(--selb) }
+.poi .dot { width: 28px; height: 28px; border-radius: 50%; flex: none; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 13px }
+.poi .m { margin-inline-start: auto; text-align: end }
+.poi small { display: block; color: var(--muted) }
+.yourplot { display: flex; align-items: center; gap: 12px; background: var(--bg); border-radius: 12px; padding: 12px 14px; margin-top: 12px }
+.yourplot .pin { font-size: 20px; color: var(--g) }
+.yourplot button { margin-inline-start: auto }
+#submitStatus .steps { display: flex; gap: 6px; margin-top: 10px }
+.steps div { flex: 1; font-size: 11px; text-align: center; padding: 7px 4px; border-radius: 8px; background: #eef2ef; color: var(--muted) }
+.steps div.done { background: #d6eedf; color: var(--g); font-weight: 600 }
+.steps div.now { background: #fde8c8; color: #8a4b00; font-weight: 600 }

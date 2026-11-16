@@ -1,0 +1,11 @@
+:host { display: contents; }
+
+#panel { width: 430px; background: var(--card); border-radius: 20px; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 8px 30px rgba(0, 0, 0, .06) }
+.ptabs { display: flex; gap: 4px; padding: 10px; border-bottom: 1px solid var(--line); flex-wrap: wrap }
+.ptabs button { border: 0; background: #e8efea; border-radius: 18px; padding: 7px 11px; font-size: 12px; color: var(--ink) }
+.ptabs button.on { background: var(--g); color: #fff }
+.tab { display: none; padding: 12px 18px 22px; overflow: auto; flex: 1 }
+.tab.on { display: block }
+@media (max-width: 1200px) {
+  #panel { width: 360px }
+}

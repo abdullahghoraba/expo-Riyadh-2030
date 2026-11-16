@@ -1,0 +1,20 @@
+<div id="sliderBar" [class.hidden]="!cfg()">
+  @if (cfg(); as o) {
+    <button type="button" id="sliderPlay" class="play" (click)="analysis.togglePlay()">{{ (analysis.sliderPlaying() ? '❚❚' : '▶') | t }}</button>
+    <div class="sb-main">
+      <div class="sb-top"><b id="sliderTitle">{{ (o.title) | t }}</b><span id="sliderValue">{{ (label()) | t }}</span></div>
+      <input type="range" id="slider" [min]="o.min" [max]="o.max" [step]="o.step" [value]="analysis.sliderValue()"
+        (input)="analysis.setSliderValue(+$any($event.target).value)">
+      <div class="sb-ticks" id="sliderTicks">
+        @for (t of o.ticks; track $index) {
+          <span>{{ (t) | t }}</span>
+        }
+      </div>
+    </div>
+    <div id="sliderLegend">
+      @for (l of o.legend ?? []; track l[1]) {
+        <div><i [style.background]="l[0]"></i>{{ (l[1]) | t }}</div>
+      }
+    </div>
+  }
+</div>

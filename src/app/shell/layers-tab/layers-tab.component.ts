@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, ElementRef, computed, inject, viewChild } from '@angular/core';
+import { TranslatePipe } from '../../core/translate.pipe';
+import { ChangeDetectionStrategy, Component, DestroyRef, ElementRef, computed, effect, inject, viewChild } from '@angular/core';
+import { I18nService } from '../../core/i18n.service';
 import type LayerList from '@arcgis/core/widgets/LayerList';
 import { DataService } from '../../core/data.service';
 import { fmt } from '../../core/geo';
@@ -9,10 +11,13 @@ import { BASEMAPS, SceneService } from '../../map/scene.service';
 /** "Layers" tab: basemap picker, ArcGIS LayerList and the site-database summary. */
 @Component({
   selector: 'app-layers-tab',
+  imports: [TranslatePipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './layers-tab.component.html'
+  templateUrl: './layers-tab.component.html',
+  styleUrl: './layers-tab.component.scss'
 })
 export class LayersTabComponent {
+  private readonly i18n = inject(I18nService);
   private readonly data = inject(DataService);
   protected readonly scene = inject(SceneService);
   protected readonly state = inject(StateService);
@@ -37,10 +42,16 @@ export class LayersTabComponent {
   });
 
   constructor() {
+    effect(() => {
+      this.state.lang();
+      this.layerList?.operationalItems.forEach(item => { item.title = this.i18n.text(item.layer?.title); });
+    });
     this.scene.ready.then(async view => {
       const { default: LayerListWidget } = await import('@arcgis/core/widgets/LayerList');
       if (this.destroyed) return;
-      this.layerList = new LayerListWidget({ view, container: this.layerListEl().nativeElement });
+      this.layerList = new LayerListWidget({ view, container: this.layerListEl().nativeElement,
+        listItemCreatedFunction: ({ item }) => { item.title = this.i18n.text(item.layer?.title); }
+      });
     });
     inject(DestroyRef).onDestroy(() => {
       this.destroyed = true;

@@ -1,0 +1,14 @@
+:host { display: contents; }
+
+.pv-head { display: flex; justify-content: space-between; align-items: flex-start }
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 8px }
+.kpis div { background: #f3f7f4; border-radius: 10px; padding: 8px; text-align: center }
+.kpis b { display: block; font-size: 16px; color: var(--g) }
+.kpis span { font-size: 10.5px; color: var(--muted) }
+.swatches { display: flex; gap: 8px; margin: 6px 0 }
+.swatches button { width: 30px; height: 22px; border-radius: 6px; border: 2px solid transparent }
+.swatches button.on { border-color: var(--ink) }
+.toggles { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 10px; font-size: 12.5px }
+.toggles input { accent-color: var(--g) }
+.cad-wrap { border-radius: 12px; overflow: hidden; background: #0a1a2f; cursor: zoom-in }
+.cad-wrap canvas { width: 100%; display: block }

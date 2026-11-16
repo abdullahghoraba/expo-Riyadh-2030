@@ -1,3 +1,4 @@
+import { TranslatePipe } from '../../core/translate.pipe';
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { DataService } from '../../core/data.service';
 import { LightMode, RenderMode, WeatherMode } from '../../core/models';
@@ -9,8 +10,10 @@ import { SceneService } from '../../map/scene.service';
 /** Controls floating over the 3D view: style / light / weather segments, hero actions, legend, disclaimer. */
 @Component({
   selector: 'app-map-overlays',
+  imports: [TranslatePipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './map-overlays.component.html'
+  templateUrl: './map-overlays.component.html',
+  styleUrl: './map-overlays.component.scss'
 })
 export class MapOverlaysComponent {
   protected readonly scene = inject(SceneService);

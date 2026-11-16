@@ -1,0 +1,30 @@
+<div id="submitModal" class="modal" [class.hidden]="!plots.submitOpen()">
+  <div class="modal-box">
+    <div class="modal-head"><b>{{ "Submit plot request" | t }}</b><button type="button" class="x" id="submitClose" (click)="plots.submitOpen.set(false)">✕</button></div>
+    <div id="submitBody">
+      @if (plots.submitOpen() && plots.submitView(); as v) {
+        <div class="row"><span>{{ "Participant" | t }}</span><b>{{ (v.participant) | t }}</b></div>
+        <div class="row"><span>{{ "Plot" | t }}</span><b>{{ (v.plot) | t }}</b></div>
+        <div class="row"><span>{{ "Size" | t }}</span><b>{{ (v.size) | t }}</b></div>
+        <div class="row"><span>{{ "Concept design" | t }}</span><b>{{ (v.design) | t }}</b></div>
+        <div class="row"><span>{{ "Floors / GFA" | t }}</span><b>{{ (v.floors) | t }}</b></div>
+        @if (v.metroMin !== null) {
+          <div class="row"><span>{{ "Walk from Expo Station" | t }}</span><b>{{ (v.metroMin) | t }} {{ "min" | t }}</b></div>
+        }
+        @if (plots.submitSub(); as sub) {
+          <p>{{ "✅ Request" | t }} <b>{{ (sub.ref) | t }}</b> {{ "submitted" | t }} {{ (dateTime(sub.t)) | t }}{{ ". Status:" | t }} <b>{{ "organizer review" | t }}</b>.</p>
+          <div class="row-btns">
+            <button type="button" class="btn ghost" id="subWithdraw" (click)="plots.withdrawSubmit()">{{ "Withdraw request" | t }}</button>
+            <button type="button" class="btn primary" id="subOk" (click)="plots.confirmSubmit('')">{{ "Close" | t }}</button>
+          </div>
+        } @else {
+          <textarea id="subNote" rows="3" [placeholder]="&quot;Note to the organizer (optional)&quot; | t" #note></textarea>
+          <div class="row-btns">
+            <button type="button" class="btn" id="subDl" (click)="plots.attachDxf()">{{ "⬇ Attach CAD (DXF)" | t }}</button>
+            <button type="button" class="btn primary" id="subOk" (click)="plots.confirmSubmit(note.value)">{{ "Confirm submission" | t }}</button>
+          </div>
+        }
+      }
+    </div>
+  </div>
+</div>

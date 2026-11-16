@@ -1,0 +1,21 @@
+<div id="cadModal" class="modal" [class.hidden]="!cad.open()">
+  <div class="modal-box wide">
+    <div class="modal-head">
+      <b>{{ "CAD viewer ·" | t }} <span id="cadModalTitle">{{ (title()) | t }}</span></b>
+      <div class="chips floors" id="cadFloorChips">
+        @for (f of floors(); track $index) {
+          <button type="button" [class.on]="cad.viewerFloor() === $index" [title]="(f) | t" (click)="pickFloor($index)">{{ ($index ? 'L' + $index : 'G') | t }}</button>
+        }
+      </div>
+      <div class="seg small" id="cadTheme">
+        <button type="button" [class.on]="state.cadTheme() === 'blueprint'" (click)="setTheme('blueprint')">{{ "Blueprint" | t }}</button><button type="button" [class.on]="state.cadTheme() === 'paper'" (click)="setTheme('paper')">{{ "Paper" | t }}</button>
+      </div>
+      <button type="button" class="btn ghost small" id="cadDxf2" (click)="cad.downloadDxf()">{{ "⬇ DXF" | t }}</button>
+      <button type="button" class="btn ghost small" id="cadPng2" (click)="cad.exportPng(cad.viewerFloor())">{{ "⬇ PNG" | t }}</button>
+      <button type="button" class="x" id="cadClose" (click)="cad.close()">✕</button>
+    </div>
+    <canvas id="cadBig" #canvas
+      (wheel)="onWheel($event)" (mousedown)="onDown($event)" (dblclick)="reset(); redraw()"></canvas>
+    <div class="modal-foot muted small">{{ "Scroll to zoom · drag to pan · double-click to reset" | t }}</div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<h2>{{ "Insights" | t }}</h2>
+<div class="facts" id="facts">
+  @for (t of tiles(); track t.label) {
+    <div><b>{{ (t.value) | t }}</b><span>{{ (t.label) | t }}</span></div>
+  }
+</div>
+<h4>{{ "Plot availability by district" | t }}</h4><canvas id="chartPlots" #chartPlots width="760" height="300"></canvas>
+<h4>{{ "Visitor flow forecast (site total, by hour)" | t }}</h4><canvas id="chartCrowd" #chartCrowd width="760" height="300"></canvas>
+<h4>{{ "Services on site" | t }}</h4><canvas id="chartServices" #chartServices width="760" height="320"></canvas>
+<h4>{{ "Construction progress" | t }}</h4><canvas id="chartBuild" #chartBuild width="760" height="300"></canvas>

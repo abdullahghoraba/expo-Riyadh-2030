@@ -1,0 +1,11 @@
+<h2>{{ "GIS analysis" | t }}</h2>
+<p class="muted">{{ "Spatial tools running live on the digital twin. Pick a plot first; tools use it as the reference point." | t }}</p>
+<div id="toolList" class="tools">
+  @for (t of analysis.tools; track t.id) {
+    <div class="tool" [class.on]="analysis.active() === t.id" role="button" tabindex="0"
+      (click)="analysis.toggle(t.id)" (keydown.enter)="analysis.toggle(t.id)">
+      <div class="ti">{{ (t.icon) | t }}</div>
+      <div><b>{{ (t.name) | t }}</b><span class="badge">{{ (t.badge) | t }}</span><p>{{ (t.desc) | t }}</p></div>
+    </div>
+  }
+</div>

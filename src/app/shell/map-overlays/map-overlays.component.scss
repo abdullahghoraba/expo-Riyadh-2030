@@ -1,0 +1,13 @@
+:host { display: contents; }
+
+.map-ctrl { position: absolute; z-index: 5; display: flex; gap: 8px; flex-wrap: wrap }
+.map-ctrl.tl { top: 14px; left: 62px }
+.map-ctrl.tr { top: 14px; right: 14px; justify-content: flex-end; flex-direction: column; align-items: flex-end }
+.hero-actions { position: absolute; z-index: 5; bottom: 22px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px }
+.hero { border: 0; border-radius: 30px; padding: 13px 22px; font-size: 15px; font-weight: 600; background: rgba(255, 255, 255, .95); color: var(--g); box-shadow: 0 8px 24px rgba(0, 0, 0, .25); display: flex; align-items: center; gap: 8px; transition: transform .15s }
+.hero:hover { transform: translateY(-2px) }
+.hero.gold { background: linear-gradient(135deg, #e4c56b, #b8862b); color: #1c1405 }
+.hero.mini { padding: 13px 15px }
+.legend-mini { position: absolute; z-index: 5; left: 14px; bottom: 22px; background: rgba(255, 255, 255, .92); border-radius: 12px; padding: 8px 12px; font-size: 11.5px; display: flex; flex-direction: column; gap: 4px }
+.legend-mini i { display: inline-block; width: 11px; height: 11px; border-radius: 3px; margin-right: 6px; vertical-align: -1px }
+.disclaimer { position: absolute; z-index: 4; right: 12px; bottom: 6px; font-size: 10px; color: #fff; opacity: .75; text-shadow: 0 1px 2px #000; max-width: 55%; text-align: right }

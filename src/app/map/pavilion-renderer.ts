@@ -9,8 +9,9 @@ export interface LitePavilionOptions {
 
 /**
  * Hook between the map layers and the parametric pavilion module (reference pavilion.js + the
- * detail-pavilion parts of app.js). The default implementation renders nothing; the pavilion
- * feature provides the real one via `{ provide: PAVILION_RENDERER, useExisting: … }`.
+ * detail-pavilion parts of app.js). The default implementation renders nothing; app.config.ts
+ * registers `PavilionService` (src/app/pavilion) via `{ provide: PAVILION_RENDERER, useExisting: PavilionService }`.
+ * map/ only depends on this interface, so it never imports the pavilion feature.
  */
 export interface PavilionRenderer {
   /** pavilion.js specFromBuilding – null when not available. */

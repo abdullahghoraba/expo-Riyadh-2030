@@ -1,0 +1,19 @@
+<div id="toolPanel" [class.hidden]="!open()">
+  <div class="tp-head"><b id="toolTitle">{{ (analysis.title()) | t }}</b><button type="button" class="x" id="toolClose" (click)="analysis.stop()">✕</button></div>
+  <div id="toolBody">
+    <div [innerHTML]="analysis.body() | translateHtml"></div>
+    <div [innerHTML]="analysis.live() | translateHtml"></div>
+    @if (analysis.range(); as r) {
+      <input type="range" id="slOff" style="width:100%" [min]="r.min" [max]="r.max" [step]="r.step" [value]="r.value" (input)="r.onInput(+$any($event.target).value)">
+    }
+    @if (analysis.buttons().length) {
+      <div class="row-btns">
+        @for (b of analysis.buttons(); track b.label) {
+          <button type="button" [class]="'btn small ' + (b.cls || '')" (click)="b.action()">{{ (b.label) | t }}</button>
+        }
+      </div>
+    }
+    <div [innerHTML]="analysis.foot() | translateHtml"></div>
+  </div>
+  <div id="toolWidget" #widget></div>
+</div>

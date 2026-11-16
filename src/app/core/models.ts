@@ -48,13 +48,14 @@ export interface BuildingProps {
 export type ServiceType = 'restroom' | 'prayer' | 'aid' | 'food' | 'visitor' | 'servicegate' | 'metro';
 export interface ServiceProps {
   sid: string; type: ServiceType; name: string; location: string; district: string; open: string; accessible: number;
+  nameAr?: string; locationAr?: string;
   capacity?: number; outlets?: number; ambulance?: number; lanes?: number; lines?: string; headwayMin?: number;
 }
 
 export type LandscapeKind = 'site' | 'plaza' | 'garden' | 'water' | 'median' | 'island';
 export interface LandscapeProps { kind: LandscapeKind; name: string }
 
-export interface ParkingProps { lid: string; name: string; capacity: number; evChargers: number }
+export interface ParkingProps { lid: string; name: string; capacity: number; evChargers: number; nameAr?: string }
 export interface VehicleProps { model: string; heading: number }
 export interface TreeProps { species: string; height: number; rot: number }
 export interface LightProps { heading: number }

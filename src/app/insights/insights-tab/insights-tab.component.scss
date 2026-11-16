@@ -1,0 +1,7 @@
+:host { display: contents; }
+
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 8px }
+.facts div { background: linear-gradient(135deg, #0b3d2e, #145a43); color: #fff; border-radius: 12px; padding: 12px 10px }
+.facts b { display: block; font-size: 20px; color: var(--gold2) }
+.facts span { font-size: 11px; opacity: .85 }
+canvas { width: 100%; background: #fafcfb; border-radius: 12px }

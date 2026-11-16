@@ -1,0 +1,10 @@
+:host { display: contents; }
+
+.tools { display: flex; flex-direction: column; gap: 8px }
+.tool { display: flex; gap: 12px; align-items: flex-start; border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; cursor: pointer; transition: .15s; background: #fff }
+.tool:hover { border-color: var(--g); background: #f7faf8 }
+.tool.on { border-color: var(--g); background: #e9f3ed; box-shadow: inset 3px 0 0 var(--g) }
+.tool .ti { font-size: 20px; width: 34px; height: 34px; border-radius: 10px; background: #eef3ef; display: flex; align-items: center; justify-content: center; flex: none }
+.tool b { font-size: 13px }
+.tool p { margin: 2px 0 0; font-size: 11.5px; color: var(--muted) }
+.tool .badge { font-size: 9.5px; background: #e3ebe5; border-radius: 6px; padding: 1px 6px; margin-left: 6px; color: var(--g); font-weight: 600 }

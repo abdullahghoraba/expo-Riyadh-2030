@@ -1,20 +1,90 @@
 {
   "imagine": [
-    { "id": "arrive", "en": "Welcome to Expo 2030 Riyadh. You have just arrived at Expo Station. The airport is only one metro stop away, and the whole world is waiting just ahead.", "ar": "أهلًا بك في إكسبو 2030 الرياض. لقد وصلت للتو إلى محطة إكسبو، والمطار على بُعد محطة واحدة فقط بالمترو، والعالم بأسره بانتظارك على بُعد خطوات.", "arSpeech": "أهلًا بِكَ في إكسبو ألفين وثلاثين الرياض. لقد وصلتَ للتوّ إلى محطة إكسبو، والمطارُ على بُعْدِ محطةٍ واحدة فقط بالمترو، والعالمُ بأسرِه بانتظارِكَ على بُعْدِ خطوات." },
-    { "id": "walk", "en": "Walk with me through the north gate, along palm-lined avenues. In just {walk} minutes, you reach your plot, {plot}, in the {district}.", "ar": "رافقني عبر البوابة الشمالية، على امتداد جادّات تظلّلها أشجار النخيل. وخلال {walkArTxt} فقط، تصل إلى قطعتك {plot} في {districtAr}.", "arSpeech": "رافِقْني عبر البوابة الشمالية، على امتدادِ جادّاتٍ تُظَلِّلُها أشجارُ النخيل. وخلال {walkAr} فقط، تَصِلُ إلى قطعتِكَ {plotAr} في {districtAr}." },
-    { "id": "plot", "en": "Here it is. Sixteen hundred square metres, ready for your nation's story. {floors} floors, and {gfa} square metres of space to welcome millions of visitors.", "ar": "ها هي قطعتك: ألف وستمئة متر مربع، جاهزة لتروي قصة بلدك. جناح من {floorsArTxt}، بمساحة {gfaArTxt}، يتّسع لاستقبال ملايين الزوار.", "arSpeech": "ها هي قطعتُكَ: ألف وستمئة متر مربع، جاهزةٌ لِتَرْوِيَ قصةَ بلدِكَ. جناحٌ من {floorsAr}، بمساحة {gfaAr}، يَتَّسِعُ لاستقبال ملايين الزوار." },
-    { "id": "inside", "en": "Step inside. The exhibition hall opens in front of you, the café is right beside you, and the immersive theatre is just upstairs. Every space is designed around the visitor.", "ar": "تفضّل بالدخول. قاعة العرض تنفتح أمامك، والمقهى إلى جانبك مباشرة، ومسرح العروض الغامرة في الطابق العلوي. كل مساحة هنا صُمّمت من أجل الزائر.", "arSpeech": "تفضَّلْ بالدخول. قاعةُ العرض تنفتحُ أمامَكَ، والمقهى إلى جانبِكَ مباشرةً، ومسرحُ العروض الغامرة في الطابق العلوي. كلُّ مساحةٍ هنا صُمِّمَتْ من أجل الزائر." },
-    { "id": "services", "en": "Everything your team and your guests need is close by. Restrooms just {restroom} metres away, a prayer room within {prayer} metres, and first aid only {aid} metres from your door.", "ar": "وكل ما يحتاجه فريقك وضيوفك قريب منك: دورات المياه على بُعد {restroomArTxt} فقط، والمصلّى في حدود {prayerArTxt}، ونقطة الإسعافات الأولية على بُعد {aidArTxt} فقط من بابك.", "arSpeech": "وكلُّ ما يحتاجُه فريقُكَ وضيوفُكَ قريبٌ منكَ: دوراتُ المياه على بُعْدِ {restroomAr} فقط، والمُصلّى في حدود {prayerAr}، ونقطةُ الإسعافات الأولية على بُعْدِ {aidAr} فقط من بابِكَ." },
-    { "id": "rooftop", "en": "Now look out from your rooftop terrace. The Oasis, the Globe, the theme pavilions. The world, gathered in Riyadh, all around you.", "ar": "والآن، تأمّل المشهد من شُرفة السطح في جناحك: الواحة، والكرة الأرضية، والأجنحة الموضوعية. العالم كله مجتمع في الرياض، من حولك.", "arSpeech": "والآن، تأمَّلِ المشهدَ من شُرفةِ السطح في جناحِكَ: الواحة، والكرة الأرضية، والأجنحة الموضوعية. العالمُ كلُّه مُجتمِعٌ في الرياض، من حولِكَ." },
-    { "id": "sunset", "en": "And as the sun sets over Riyadh, your pavilion lights up the night. This is your place at Expo 2030. Let's build it together.", "ar": "ومع غروب الشمس على الرياض، يضيء جناحك ليل المدينة. هذا مكانك في إكسبو 2030. فلنبنِه معًا.", "arSpeech": "ومع غروبِ الشمس على الرياض، يُضيءُ جناحُكَ ليلَ المدينة. هذا مكانُكَ في إكسبو ألفين وثلاثين. فلْنَبْنِهِ معًا." }
+    {
+      "id": "arrive",
+      "en": "Welcome to Expo 2030 Riyadh. You have just arrived at Expo Station. The airport is only one metro stop away, and the whole world is waiting just ahead.",
+      "ar": "مرحبًا بكم في إكسبو 2030 الرياض. لقد وصلتم الآن إلى محطة إكسبو؛ مطار الملك خالد الدولي على بُعد محطة واحدة فقط بالمترو، والعالم بأسره بانتظاركم هنا.",
+      "arSpeech": "مَرْحَبًا بِكُمْ في إكسبو أَلْفَيْنِ وَثَلاثِين الرياض. لَقَدْ وَصَلْتُمُ الآنَ إلى مَحَطَّةِ إكسبو؛ مَطارُ المَلِكِ خالِدٍ الدَّوْلِيِّ على بُعْدِ مَحَطَّةٍ واحِدَةٍ فَقَطْ بالمِتْرو، وَالعالَمُ بأَسْرِهِ بانْتِظارِكُمْ هُنا."
+    },
+    {
+      "id": "walk",
+      "en": "Walk with me through the north gate, along palm-lined avenues. In just {walk} minutes, you reach your plot, {plot}, in the {district}.",
+      "ar": "انطلقوا معنا عبر البوابة الشمالية، على امتداد جادّاتٍ غنّاء تظلّلها أشجار النخيل. وخلال {walkArTxt} فقط، نصل إلى قطعتكم المتميزة {plot} في {districtAr}.",
+      "arSpeech": "انْطَلِقُوا مَعَنا عَبْرَ البَوّابَةِ الشَّمالِيَّة، على امْتِدادِ جادّاتٍ غَنّاءَ تُظَلِّلُها أَشْجارُ النَّخيل. وَخِلالَ {walkAr} فَقَطْ، نَصِلُ إلى قِطْعَتِكُمُ المُتَمَيِّزَةِ {plotAr} في {districtAr}."
+    },
+    {
+      "id": "plot",
+      "en": "Here it is. Sixteen hundred square metres, ready for your nation's story. {floors} floors, and {gfa} square metres of space to welcome millions of visitors.",
+      "ar": "ها هي أرضكم الواعدة: مساحة تبلغ ألفًا وستمئة متر مربع، تستعد لتروي للعالم قصة وطنكم. جناحٌ من {floorsArTxt}، بمساحة رحبة تبلغ {gfaArTxt}، ليرحب بملايين الزوار.",
+      "arSpeech": "ها هِيَ أَرْضُكُمُ الواعِدَة: مِساحَةٌ تَبْلُغُ أَلْفًا وَسِتَّمِئَةِ مِتْرٍ مُرَبَّع، تَسْتَعِدُّ لِتَرْوِيَ لِلْعالَمِ قِصَّةَ وَطَنِكُم. جَناحٌ مِنْ {floorsAr}، بِمِساحَةٍ رَحْبَةٍ تَبْلُغُ {gfaAr}، لِيُرَحِّبَ بِمَلايينِ الزُّوّار."
+    },
+    {
+      "id": "inside",
+      "en": "Step inside. The exhibition hall opens in front of you, the café is right beside you, and the immersive theatre is just upstairs. Every space is designed around the visitor.",
+      "ar": "تفضّلوا بالدخول. تنفتح أمامكم قاعة العرض التفاعلية، ويجاوركم المقهى والمساحات المفتوحة، بينما يحتضن الطابق العلوي المسرح الحيوي الغامر. كل مساحة هنا صُمّمت لتلهم الزائر.",
+      "arSpeech": "تَفَضَّلُوا بالدُّخول. تَنْفَتِحُ أَمامَكُمْ قاعَةُ العَرْضِ التَّفاعُلِيَّة، وَيُجاوِرُكُمُ المَقْهى وَالمِساحاتُ المَفْتوحَة، بَيْنَما يَحْتَضِنُ الطّابِقُ العُلْوِيُّ المَسْرَحَ الحَيَوِيَّ الغامِر. كُلُّ مِساحَةٍ هُنا صُمِّمَتْ لِتُلْهِمَ الزّائِر."
+    },
+    {
+      "id": "services",
+      "en": "Everything your team and your guests need is close by. Restrooms just {restroom} metres away, a prayer room within {prayer} metres, and first aid only {aid} metres from your door.",
+      "ar": "كافة الخدمات والمرافق الحيوية قريبة منكم بكل يسر: المصلّى في حدود {prayerArTxt}، والمرافق الخدمية على بُعد {restroomArTxt}، ونقطة الإسعافات الأولية على بُعد {aidArTxt} فقط من بابكم.",
+      "arSpeech": "كافَّةُ الخَدَماتِ وَالمَرافِقِ الحَيَوِيَّةِ قَريبَةٌ مِنْكُمْ بِكُلِّ يُسْر: المُصَلّى في حُدودِ {prayerAr}، وَالمَرافِقُ الخِدْمِيَّةُ على بُعْدِ {restroomAr}، وَنُقْطَةُ الإسْعافاتِ الأَوَّلِيَّةِ على بُعْدِ {aidAr} فَقَطْ مِنْ بابِكُمْ."
+    },
+    {
+      "id": "rooftop",
+      "en": "Now look out from your rooftop terrace. The Oasis, the Globe, the theme pavilions. The world, gathered in Riyadh, all around you.",
+      "ar": "والآن، تأمّلوا المشهد الخلاب من شرفة السطح: ساحة الواحة الغنّاء، وأيقونة 'الكرة الأرضية'، والأجنحة الموضوعية. العالم كله يلتقي هنا في قلب الرياض، من حولكم.",
+      "arSpeech": "وَالآن، تَأَمَّلُوا المَشْهَدَ الخَلّابَ مِنْ شُرْفَةِ السَّطْح: ساحَةَ الواحَةِ الغَنّاء، وَأَيْقونَةَ الكُرَةِ الأَرْضِيَّة، وَالأَجْنِحَةَ المَوْضوعِيَّة. العالَمُ كُلُّهُ يَلْتَقي هُنا في قَلْبِ الرِّياض، مِنْ حَوْلِكُمْ."
+    },
+    {
+      "id": "sunset",
+      "en": "And as the sun sets over Riyadh, your pavilion lights up the night. This is your place at Expo 2030. Let's build it together.",
+      "ar": "ومع غروب الشمس وسحر المساء في الرياض، يتلألأ جناحكم ليزيّن سماء العاصمة. هذا هو مكانكم الريادي في إكسبو 2030... معًا نصنع المستقبل.",
+      "arSpeech": "وَمَعَ غُروبِ الشَّمْسِ وَسِحْرِ المَساءِ في الرِّياض، يَتَلأْلأُ جَناحُكُمْ لِيُزَيِّنَ سَماءَ العاصِمَة. هذا هُوَ مَكانُكُمُ الرِّيادِيُّ في إكسبو أَلْفَيْنِ وَثَلاثِين... مَعًا نَصْنَعُ المُسْتَقْبَل."
+    }
   ],
   "tour": [
-    { "id": "overview", "en": "This is the Expo 2030 Riyadh site, as a living digital twin. Every street, plot, building and service is mapped in 3D.", "ar": "هذا هو موقع إكسبو 2030 الرياض، كما يبدو في توأمه الرقمي الحيّ. كل شارع وقطعة ومبنى وخدمة ممثَّل في نموذج ثلاثي الأبعاد.", "arSpeech": "هذا هو موقعُ إكسبو ألفين وثلاثين الرياض، كما يبدو في توأمِه الرقميِّ الحيّ. كلُّ شارعٍ وقطعةٍ ومبنى وخدمةٍ مُمَثَّلٌ في نموذجٍ ثلاثيِّ الأبعاد." },
-    { "id": "oasis", "en": "At its heart is the Oasis Plaza and the Globe, the meeting point for millions of visitors.", "ar": "وفي قلبه ساحة الواحة والكرة الأرضية، ملتقى ملايين الزوار.", "arSpeech": "وفي قلبِه ساحةُ الواحة والكرةُ الأرضية، مُلتقى ملايين الزوار." },
-    { "id": "theme", "en": "Around it, the Saudi pavilion and the three theme pavilions tell the story of the Expo.", "ar": "ومن حولها، يروي جناح المملكة والأجنحة الموضوعية الثلاثة قصة المعرض.", "arSpeech": "ومن حولِها، يَروي جناحُ المملكة والأجنحةُ الموضوعيةُ الثلاثة قصةَ المعرض." },
-    { "id": "districts", "en": "Four districts host the nations of the world, each with its own plots, services and gardens.", "ar": "أربع مناطق تستضيف دول العالم، ولكلٍّ منها قِطَعها وخدماتها وحدائقها الخاصة.", "arSpeech": "أربعُ مناطقَ تَستضيفُ دولَ العالم، ولكلٍّ منها قِطَعُها وخدماتُها وحدائقُها الخاصة." },
-    { "id": "metro", "en": "Visitors arrive by metro, one stop from King Khalid International Airport, and walk straight into the north gate.", "ar": "يصل الزوار بالمترو، على بُعد محطة واحدة من مطار الملك خالد الدولي، ويدخلون مباشرة من البوابة الشمالية.", "arSpeech": "يَصِلُ الزوارُ بالمترو، على بُعْدِ محطةٍ واحدة من مطار الملك خالد الدولي، ويدخلون مباشرةً من البوابة الشمالية." },
-    { "id": "underground", "en": "Below the ground, water, power, fibre and district cooling networks are mapped and ready for operations.", "ar": "أما تحت الأرض، فشبكات المياه والكهرباء والألياف الضوئية وتبريد المناطق مرسومة على الخريطة وجاهزة للتشغيل.", "arSpeech": "أمّا تحتَ الأرض، فشبكاتُ المياه والكهرباء والألياف الضوئية وتبريدِ المناطق مرسومةٌ على الخريطة وجاهزةٌ للتشغيل." },
-    { "id": "plot", "en": "And here is your plot, {plot}. Let's see what you can build.", "ar": "وهذه قطعتك {plot}. لنرَ معًا ما يمكنك أن تبنيه عليها.", "arSpeech": "وهذه قطعتُكَ {plotAr}. لِنَرَ معًا ما يُمكِنُكَ أن تَبنِيَهُ عليها." }
+    {
+      "id": "overview",
+      "en": "This is the Expo 2030 Riyadh site, as a living digital twin. Every street, plot, building and service is mapped in 3D.",
+      "ar": "هذا هو موقع إكسبو 2030 الرياض، في نموذج التوأم الرقمي الحيّ. كل شارع وقطعة أرض ومبنى ومرفق خدمي ممثّل بدقة ثلاثية الأبعاد.",
+      "arSpeech": "هذا هُوَ مَوْقِعُ إكسبو أَلْفَيْنِ وَثَلاثِين الرياض، في نَموذَجِ التَّوْأَمِ الرَّقْمِيِّ الحَيّ. كُلُّ شارِعٍ وَقِطْعَةِ أَرْضٍ وَمَبْنًى وَمَرْفِقٍ خِدْمِيٍّ مُمَثَّلٌ بِدِقَّةٍ ثُلاثِيَّةِ الأَبْعاد."
+    },
+    {
+      "id": "oasis",
+      "en": "At its heart is the Oasis Plaza and the Globe, the meeting point for millions of visitors.",
+      "ar": "في قلب الموقع تتألق ساحة الواحة الخضراء والكرة الأرضية الكبرى، لتكون نقطة اللقاء لملايين الزوار.",
+      "arSpeech": "في قَلْبِ المَوْقِعِ تَتَأَلَّقُ ساحَةُ الواحَةِ الخَضْراء وَالكُرَةُ الأَرْضِيَّةُ الكُبْرى، لِتَكونَ نُقْطَةَ اللِّقاءِ لِمَلايينِ الزُّوّار."
+    },
+    {
+      "id": "theme",
+      "en": "Around it, the Saudi pavilion and the three theme pavilions tell the story of the Expo.",
+      "ar": "وحول الواحة، يقف جناح المملكة شامخًا، وإلى جانبه الأجنحة الموضوعية الثلاثة، لتروي معًا قصة الابتكار والاستدامة.",
+      "arSpeech": "وَحَوْلَ الواحَة، يَقِفُ جَناحُ المَمْلَكَةِ شامِخًا، وَإلى جانِبِهِ الأَجْنِحَةُ المَوْضوعِيَّةُ الثَّلاثَة، لِتَرْوِيَ مَعًا قِصَّةَ الابْتِكارِ وَالاسْتِدامَة."
+    },
+    {
+      "id": "districts",
+      "en": "Four districts host the nations of the world, each with its own plots, services and gardens.",
+      "ar": "أربع مناطق متكاملة تستضيف أجنحة دول العالم، صُممت كل منها بحدائق وساحات ومرافق مستقلة.",
+      "arSpeech": "أَرْبَعُ مَناطِقَ مُتَكامِلَة تَسْتَضيفُ أَجْنِحَةَ دُوَلِ العالَم، صُمِّمَتْ كُلٌّ مِنْها بِحَدائِقَ وَساحاتٍ وَمَرافِقَ مُسْتَقِلَّة."
+    },
+    {
+      "id": "metro",
+      "en": "Visitors arrive by metro, one stop from King Khalid International Airport, and walk straight into the north gate.",
+      "ar": "يتوافد الزوار عبر شبكة قطار الرياض السريعة؛ محطة واحدة فقط من مطار الملك خالد الدولي، والوصول مباشرة عبر البوابة الشمالية الفسيحة.",
+      "arSpeech": "يَتَوافَدُ الزُّوّارُ عَبْرَ شَبَكَةِ قِطارِ الرِّياضِ السَّريعَة؛ مَحَطَّةٌ واحِدَةٌ فَقَطْ مِنْ مَطارِ المَلِكِ خالِدٍ الدَّوْلِيّ، وَالوُصولُ مُباشَرَةً عَبْرَ البَوّابَةِ الشَّمالِيَّةِ الفَسيحَة."
+    },
+    {
+      "id": "underground",
+      "en": "Below the ground, water, power, fibre and district cooling networks are mapped and ready for operations.",
+      "ar": "وتحت سطح الأرض، تمتد بنية تحتية رقمية ذكية تضم شبكات المياه والكهرباء والألياف البصرية وتبريد المناطق، جاهزة للتشغيل بكفاءة عالمية.",
+      "arSpeech": "وَتَحْتَ سَطْحِ الأَرْض، تَمْتَدُّ بِنْيَةٌ تَحْتِيَّةٌ رَقْمِيَّةٌ ذَكِيَّة تَضُمُّ شَبَكاتِ المِياهِ وَالكَهْرَباءِ وَالأَلْيافِ البَصَرِيَّةِ وَتَبْريدِ المَناطِق، جاهِزَةٌ لِلتَّشْغيلِ بِكَفاءَةٍ عالَمِيَّة."
+    },
+    {
+      "id": "plot",
+      "en": "And here is your plot, {plot}. Let's see what you can build.",
+      "ar": "وهنا تقع قطعتكم {plot}. فلنبدأ معًا رحلة تصميم وبناء جناحكم الاستثنائي.",
+      "arSpeech": "وَهُنا تَقَعُ قِطْعَتُكُمُ {plotAr}. فَلْنَبْدَأْ مَعًا رِحْلَةَ تَصْمِيمِ وَبِناءِ جَناحِكُمُ الاسْتِثْنائِيّ."
+    }
   ]
 }

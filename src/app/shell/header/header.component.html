@@ -1,19 +1,19 @@
 <header class="topnav">
-  <div class="logo"><span class="mark">✕✕</span><div><b>EXPO 2030</b><b>RIYADH</b><small>SAUDI ARABIA</small></div></div>
+  <div class="logo"><span class="mark">✕✕</span><div><b>{{ "EXPO 2030" | t }}</b><b>{{ "RIYADH" | t }}</b><small>{{ "SAUDI ARABIA" | t }}</small></div></div>
   <nav>
-    <a>Home</a><a class="on">Services</a><a>Requests</a><a>Documents</a><a>Schedule</a><span class="sep"></span><a>One-Stop Shop</a><a>Procurement Hub</a>
+    <a>{{ "Home" | t }}</a><a class="on">{{ "Services" | t }}</a><a>{{ "Requests" | t }}</a><a>{{ "Documents" | t }}</a><a>{{ "Schedule" | t }}</a><span class="sep"></span><a>{{ "One-Stop Shop" | t }}</a><a>{{ "Procurement Hub" | t }}</a>
   </nav>
   <div class="right">
-    <div class="seg small" id="langSeg" title="Narration language">
-      <button type="button" [class.on]="state.lang() === 'en'" (click)="setLang('en')">EN</button><button type="button" [class.on]="state.lang() === 'ar'" (click)="setLang('ar')">ع</button>
+    <div class="seg small" id="langSeg" [title]="'Language' | t" dir="ltr">
+      <button type="button" lang="en" [class.on]="state.lang() === 'en'" (click)="setLang('en')">{{ "English" | t }}</button><button type="button" lang="ar" dir="rtl" [class.on]="state.lang() === 'ar'" (click)="setLang('ar')">العربية</button>
     </div>
-    <span class="icon bell" title="Notifications">🔔<i></i></span>
-    <span class="avatar" id="avatar">{{ initials() }}</span>
+    <span class="icon bell" [title]="&quot;Notifications&quot; | t">🔔<i></i></span>
+    <span class="avatar" id="avatar">{{ (initials()) | t }}</span>
   </div>
 </header>
 
 <div class="subbar">
-  <div class="deleg"><span class="ico">▣</span><b id="delegName">{{ delegName() }}</b> ▾</div>
-  <div class="title"><h1>Your pavilion</h1><span>Your space, design submissions, and operational services.</span></div>
-  <div class="crumbs">Participant portal · Expo 2030 Riyadh</div>
+  <div class="deleg"><span class="ico">▣</span><b id="delegName">{{ (delegName()) | t }}</b> ▾</div>
+  <div class="title"><h1>{{ "Your pavilion" | t }}</h1><span>{{ "Your space, design submissions, and operational services." | t }}</span></div>
+  <div class="crumbs">{{ "Participant portal · Expo 2030 Riyadh" | t }}</div>
 </div>

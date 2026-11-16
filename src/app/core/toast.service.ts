@@ -7,6 +7,13 @@ export class ToastService {
   readonly message = signal('');
   readonly visible = signal(false);
 
+  /**
+   * Displays a temporary toast notification banner at the top of the viewport.
+   * Automatically dismisses itself after the specified timeout.
+   *
+   * @param msg Message string or translated phrase to display.
+   * @param ms Visible duration in milliseconds (default is 2600 ms).
+   */
   show(msg: string, ms = 2600): void {
     this.message.set(msg);
     this.visible.set(true);

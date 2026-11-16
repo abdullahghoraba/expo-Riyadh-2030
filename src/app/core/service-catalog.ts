@@ -20,7 +20,15 @@ export const COMPASS = ['north', 'north-east', 'east', 'south-east', 'south', 's
 
 const iconCache: Record<string, string> = {};
 
-/** Icon bitmap (data URL) drawn on a canvas: coloured disc + glyph. Browser only. */
+/**
+ * Draws and caches a circular icon bitmap containing a color disc and emoji/symbol glyph onto an HTML canvas,
+ * returning it as a PNG data URL.
+ *
+ * @param glyph Character or emoji symbol to render in the center.
+ * @param color CSS background color string for the circle.
+ * @param size Canvas width and height in pixels (default is 64).
+ * @returns PNG data URL string suitable for ArcGIS 3D icon resources.
+ */
 export function icon(glyph: string, color: string, size = 64): string {
   const key = glyph + color + size;
   if (iconCache[key]) return iconCache[key];
@@ -43,7 +51,17 @@ export function icon(glyph: string, color: string, size = 64): string {
   return (iconCache[key] = c.toDataURL());
 }
 
-/** Trigger a browser download of a blob / text (reference `U.download`). */
+/** Alias for {@link icon} conforming to descriptive verb-phrase function naming. */
+export const createIconDataUrl = icon;
+
+/**
+ * Triggers a browser file download of a Blob or raw text string.
+ * Creates a transient anchor link element and cleans up the created object URL.
+ *
+ * @param name Desired file name for the download.
+ * @param data Blob instance or text string to save.
+ * @param mime Optional MIME type if data is a raw string (defaults to 'text/plain').
+ */
 export function download(name: string, data: Blob | string, mime?: string): void {
   const blob = data instanceof Blob ? data : new Blob([data], { type: mime || 'text/plain' });
   const a = document.createElement('a');

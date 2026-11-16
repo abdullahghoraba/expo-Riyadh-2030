@@ -1,0 +1,12 @@
+<aside id="panel">
+  <nav class="ptabs" id="ptabs">
+    @for (t of tabs; track t[0]) {
+      <button type="button" [class.on]="state.tab() === t[0]" (click)="state.tab.set(t[0])">{{ (t[1]) | t }}</button>
+    }
+  </nav>
+  <section class="tab" id="tab-plot" [class.on]="state.tab() === 'plot'"><app-plot-tab /></section>
+  <section class="tab" id="tab-pavilion" [class.on]="state.tab() === 'pavilion'"><app-pavilion-tab /></section>
+  <section class="tab" id="tab-analysis" [class.on]="state.tab() === 'analysis'"><app-analysis-tab /></section>
+  <section class="tab" id="tab-layers" [class.on]="state.tab() === 'layers'"><app-layers-tab /></section>
+  <section class="tab" id="tab-insights" [class.on]="state.tab() === 'insights'"><app-insights-tab /></section>
+</aside>

@@ -20,6 +20,13 @@ export class DataService {
 
   readonly files: readonly GeoJsonName[] = GEOJSON_FILES;
 
+  /**
+   * Asynchronously loads the entire site database (all GeoJSON layers, site metadata, and narration scripts)
+   * in parallel, initializes the local metric center coordinate, and constructs the walking route graph.
+   * Caches the loading promise to guarantee a single network fetch.
+   *
+   * @returns Promise resolving to the frozen {@link SiteData} object.
+   */
   load(): Promise<Readonly<SiteData>> {
     if (!this.loading) {
       this.loading = (async () => {
@@ -40,18 +47,45 @@ export class DataService {
     return this.loading;
   }
 
-  /** The loaded database; throws when called before {@link load} resolved. */
+  /**
+   * Synchronously returns the loaded site database; throws if accessed prior to {@link load} resolution.
+   *
+   * @throws Error if site data has not yet finished loading.
+   */
   get d(): Readonly<SiteData> {
     const d = this._data();
     if (!d) throw new Error('Site data not loaded yet');
     return d;
   }
 
+  /**
+   * Descriptive alias for {@link d}: returns the loaded site database.
+   *
+   * @throws Error if site data has not yet finished loading.
+   */
+  get siteData(): Readonly<SiteData> {
+    return this.d;
+  }
+
+  /**
+   * Checks whether the site database has successfully finished loading.
+   */
   get loaded(): boolean {
     return this._data() !== null;
   }
 
-  /** Walking network built from streets.geojson (reference `E.router`). */
+  /**
+   * Boolean property indicating whether the database is loaded (alias for {@link loaded}).
+   */
+  get isLoaded(): boolean {
+    return this.loaded;
+  }
+
+  /**
+   * Walking network router constructed from the streets layer (reference `E.router`).
+   *
+   * @throws Error if site data has not yet finished loading.
+   */
   get router(): WalkRouter {
     if (!this._router) throw new Error('Site data not loaded yet');
     return this._router;

@@ -1,0 +1,55 @@
+# Builds the Angular app and publishes it as a live demo on GitHub Pages:
+#   https://<your-user>.github.io/<repository-name>/
+# One-time setup on GitHub: Settings → Pages → "Build and deployment" → Source: GitHub Actions.
+# Note: GitHub Pages only serves static files, so the neural voice server (tools/tts-server.mjs) does not run there;
+# the narration then uses the browser's voices (best Arabic voices: Microsoft Edge).
+name: Deploy demo to GitHub Pages
+
+on:
+  push:
+    branches: [master, main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Unit tests
+        run: npx ng test --watch=false
+
+      - name: Production build for /<repository-name>/
+        run: npx ng build --base-href "/${{ github.event.repository.name }}/"
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/expo-twin-angular/browser
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

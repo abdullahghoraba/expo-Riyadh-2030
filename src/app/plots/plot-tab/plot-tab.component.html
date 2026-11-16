@@ -1,0 +1,44 @@
+<h2>{{ "Plot allocation" | t }}</h2>
+<p class="muted">{{ "Choose the plot for your pavilion on the Expo site and submit it. Each self-built plot is 40 × 40 m; the organizers confirm the allocation." | t }}</p>
+<div class="chips" id="districtChips">
+  @for (d of districts(); track d.id) {
+    <button type="button" [class.on]="state.district() === d.id" (click)="pickDistrict(d)">{{ (d.name) | t }}</button>
+  }
+</div>
+<div class="muted small" id="districtNote">{{ (districtNote()) | t }}</div>
+<div class="plots" id="plotCards">
+  @for (c of cards(); track c.p.pid) {
+    <button type="button" [class]="c.cls" (click)="plots.selectPlot(c.p.pid)">
+      <b>{{ "Plot" | t }} {{ (c.p.pid) | t }}@if (c.st === 'pending') {<span class="tag">{{ "Submitted" | t }}</span>}</b>{{ (c.st === 'taken' ? (c.p.owner || 'Allocated') : 'Available') | t }} · {{ (fmt(c.p.area)) | t }} {{ "m²" | t }}
+    </button>
+  }
+</div>
+<div class="near">
+  <div class="near-head"><b id="nearTitle">{{ (nearTitle()) | t }}</b><span class="muted small">{{ "walking network" | t }}</span></div>
+  <div id="nearList">
+    @for (n of state.near(); track n.type) {
+      <div class="poi" [class.sel]="state.nearSel() === n.type" (click)="plots.showNear(n.type)">
+        <span class="dot" [style.background]="SERVICE[n.type].color">{{ (SERVICE[n.type].glyph) | t }}</span>
+        <div><b>{{ (SERVICE[n.type].label) | t }}</b><small>{{ (n.feature.properties.location || n.feature.properties.name) | t }}</small></div>
+        <div class="m"><b>{{ (fmt(n.len)) | t }} {{ "m" | t }}</b><small>{{ (n.min) | t }} {{ "min walk" | t }}</small></div>
+      </div>
+    }
+  </div>
+</div>
+<div class="yourplot">
+  <span class="pin">⌖</span>
+  <div><b id="ypTitle">{{ (current()?.title ?? 'Select a plot') | t }}</b><div class="muted small" id="ypSub">{{ (current()?.sub ?? '') | t }}</div></div>
+  <button type="button" id="btnSubmit" class="btn primary" [disabled]="!current()" (click)="plots.openSubmit()">{{ (current()?.pending ? 'View request' : 'Submit') | t }}</button>
+</div>
+<div id="submitStatus">
+  @if (state.selected()) {
+    <div class="steps">
+      @for (s of steps; track s; let i = $index) {
+        <div [class.done]="i < (submission() ? 2 : 0)" [class.now]="i === (submission() ? 2 : 0)">{{ (s) | t }}</div>
+      }
+    </div>
+    @if (submission(); as sub) {
+      <p class="muted small">{{ "Submitted" | t }} {{ (dateTime(sub.t)) | t }} {{ "· ref" | t }} {{ (sub.ref) | t }}</p>
+    }
+  }
+</div>

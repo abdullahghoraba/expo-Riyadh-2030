@@ -1,0 +1,8 @@
+<div id="routePop" class="pop" [class.hidden]="!plots.routePop()">
+  <button type="button" class="x" id="routePopX" (click)="plots.closeRoutePop()">✕</button>
+  <div id="routePopBody">
+    @if (plots.routePop(); as r) {
+      <b>{{ (r.glyph) | t }} {{ (r.label) | t }}</b><br>{{ (r.place) | t }}<br><b>{{ (fmt(r.len)) | t }} {{ "m" | t }}</b> · {{ (r.min) | t }} {{ "min walk" | t }}{{ (r.open ? ' · open ' + r.open : '') | t }}{{ (r.accessible ? ' · ♿' : '') | t }}
+    }
+  </div>
+</div>

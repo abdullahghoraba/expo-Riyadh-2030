@@ -1,0 +1,9 @@
+@if (loader().phase !== 'gone') {
+  <div id="loader" [class.fade]="loader().phase === 'fade'">
+    <div class="loader-box">
+      <div class="logo big"><span class="mark">✕✕</span><div><b>{{ "EXPO 2030" | t }}</b><b>{{ "RIYADH" | t }}</b><small>{{ "SAUDI ARABIA" | t }}</small></div></div>
+      <div class="spinner" [style.display]="loader().spinner ? null : 'none'"></div>
+      <div id="loaderText">{{ (loader().text) | t }}</div>
+    </div>
+  </div>
+}

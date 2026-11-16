@@ -1,4 +1,4 @@
-import { Injectable, Injector, inject, signal } from '@angular/core';
+import { Injectable, Injector, effect, inject, signal, untracked } from '@angular/core';
 import Graphic from '@arcgis/core/Graphic';
 import type EsriMap from '@arcgis/core/Map';
 import Mesh from '@arcgis/core/geometry/Mesh';
@@ -29,14 +29,42 @@ type GeoJSONLayerOptions = Omit<__esri.GeoJSONLayerProperties, 'url'>;
 type VisualVariable = (__esri.SizeVariableProperties & { type: 'size' }) | (__esri.ColorVariableProperties & { type: 'color' })
   | (__esri.RotationVariableProperties & { type: 'rotation' });
 
-/** The 4.x typings declare `visualVariables` / `edges` without their autocast `type` discriminator. */
+/**
+ * Type-cast helper for ArcGIS VisualVariable properties array.
+ *
+ * @param v Visual variable properties.
+ * @returns Array of visual variables.
+ */
 const vvs = (...v: VisualVariable[]): __esri.VisualVariableProperties[] => v;
+
+/**
+ * Type-cast helper ensuring edge configuration conforms to Esri SolidEdges3D or SketchEdges3D.
+ *
+ * @param e Edges configuration properties.
+ * @returns Edges properties.
+ */
 const edges = (e: EdgesProps): EdgesProps => e;
 
+/**
+ * Creates a 3D polygon fill symbol with optional outline color and width.
+ *
+ * @param color RGBA or RGB fill color.
+ * @param outline Optional outline color.
+ * @param osize Optional outline thickness (default 1).
+ * @returns PolygonSymbol3D properties object.
+ */
 const fill = (color: Color, outline?: Color, osize?: number): PolygonSymbolProps => ({
   type: 'polygon-3d',
   symbolLayers: [{ type: 'fill', material: { color }, outline: outline ? { color: outline, size: osize || 1 } : undefined }]
 });
+
+/**
+ * Creates a 3D polygon extruded symbol with optional edge style.
+ *
+ * @param color RGBA or RGB extrusion color.
+ * @param edges Optional edge configuration.
+ * @returns PolygonSymbol3D properties object.
+ */
 const extr = (color: Color, edges?: EdgesProps): PolygonSymbolProps => ({
   type: 'polygon-3d',
   symbolLayers: [{ type: 'extrude', material: { color }, edges }]
@@ -50,6 +78,27 @@ export interface BuildingFilter {
   year?: number | null;
 }
 
+/**
+ * Copy of a simple / unique-value renderer whose 3D symbol layers are drawn with the given opacity
+ * (fill / material colours and outlines), leaving the layer itself – and its labels – fully opaque.
+ */
+function fadeRenderer(r: __esri.Renderer, alpha: number): __esri.Renderer {
+  const out = (r as unknown as { clone(): __esri.Renderer }).clone() as __esri.Renderer & { symbol?: __esri.Symbol | null; defaultSymbol?: __esri.Symbol | null; uniqueValueInfos?: __esri.UniqueValueInfo[] | null };
+  const fade = (c: __esri.Color | null | undefined): void => { if (c) c.a = (c.a ?? 1) * alpha; };
+  const fadeSymbol = (sym: __esri.Symbol | null | undefined): void => {
+    const layers = (sym as __esri.Symbol3D | null | undefined)?.symbolLayers;
+    layers?.forEach(sl => {
+      const x = sl as __esri.Symbol3DLayer & { material?: { color?: __esri.Color | null } | null; outline?: { color?: __esri.Color | null } | null };
+      fade(x.material?.color);
+      fade(x.outline?.color);
+    });
+  };
+  fadeSymbol(out.symbol);
+  fadeSymbol(out.defaultSymbol);
+  out.uniqueValueInfos?.forEach(u => fadeSymbol(u.symbol));
+  return out;
+}
+
 /** Every map layer built from the JSON / GeoJSON site database (port of reference js/layers.js). */
 @Injectable({ providedIn: 'root' })
 export class LayersService {
@@ -61,6 +110,29 @@ export class LayersService {
   readonly mode = signal<RenderMode>('realistic');
   readonly night = signal(false);
   readonly crowdHour = signal(18);
+  /** Original renderers of labelled layers while they are faded by {@link seeThrough}. */
+  private readonly solidRenderers = new Map<GeoJSONLayer | FeatureLayer, __esri.Renderer>();
+
+  constructor() {
+    // animated waves only while the cinematic camera is flying (see realisticWater)
+    effect(() => {
+      const cinema = this.state.cinema();
+      untracked(() => {
+        if (this.water && this.mode() === 'realistic') this.water.renderer = this.realisticWater(cinema);
+      });
+    });
+  }
+
+  /**
+   * Water bodies in realistic mode. ArcGIS's animated `water` symbol redraws the whole 3D scene every frame while
+   * it is on screen (≈200-400 ms per frame on integrated GPUs → every click felt slow), so the waves are only used
+   * during Imagine / the guided tour; otherwise the pools are a static water-coloured fill.
+   */
+  private realisticWater(animated: boolean): __esri.SimpleRendererProperties & { type: 'simple' } {
+    return animated
+      ? { type: 'simple', symbol: { type: 'polygon-3d', symbolLayers: [{ type: 'water', waveDirection: 260, color: '#25a5b8', waveStrength: 'slight', waterbodySize: 'small' }] } }
+      : { type: 'simple', symbol: { type: 'polygon-3d', symbolLayers: [{ type: 'fill', material: { color: [37, 165, 184, 0.95] }, outline: { color: [214, 236, 240, 1], size: 1.2 } }] } };
+  }
   hideBid: string | null = null;
   year: number | null = null;
 
@@ -115,6 +187,14 @@ export class LayersService {
     return this.initialised;
   }
 
+  /**
+   * Initializes all 3D map layers (GeoJSONLayer, FeatureLayer, GraphicsLayer) and adds them to the EsriMap.
+   * Configures custom renderers, visual variables, labels, and builds dynamic features.
+   *
+   * @param map The target EsriMap instance.
+   * @param D The loaded SiteData database.
+   * @returns Promise that resolves once initial geographic calculations (e.g. street buffering) finish.
+   */
   async init(map: EsriMap, D: Readonly<SiteData>): Promise<void> {
     this.D = D;
     const gj = (name: GeoJsonName, o: GeoJSONLayerOptions): GeoJSONLayer =>
@@ -205,6 +285,38 @@ export class LayersService {
     this.setBuildingFilter();
   }
 
+  /**
+   * Helper that builds an Esri LabelClassProperties definition for 3D text labeling.
+   *
+   * @param field Feature attribute field to display.
+   * @param size Optional font size in points (default 10).
+   * @param color Optional text color (default 'white').
+   * @returns Configured LabelClassProperties object.
+   */
+  /**
+   * Makes the ground-level layers translucent so the underground utilities show through (or restores them).
+   * Layers with labels (Parking) are faded through their renderer symbols instead of `layer.opacity`: ArcGIS cannot
+   * fade text symbols and warns "layer opacity change not yet implemented in Graphics3DTextSymbolLayer".
+   *
+   * @param on True for the see-through ground, false to restore.
+   * @param alpha Opacity while see-through.
+   */
+  seeThrough(on: boolean, alpha = 0.35): void {
+    for (const l of [this.site, this.streets, this.green, this.districts, this.parking] as (GeoJSONLayer | FeatureLayer)[]) {
+      if (!l.labelingInfo?.length) {
+        l.opacity = on ? alpha : 1;
+        continue;
+      }
+      if (on && !this.solidRenderers.has(l) && l.renderer) {
+        this.solidRenderers.set(l, l.renderer);
+        l.renderer = fadeRenderer(l.renderer, alpha);
+      } else if (!on && this.solidRenderers.has(l)) {
+        l.renderer = this.solidRenderers.get(l)!;
+        this.solidRenderers.delete(l);
+      }
+    }
+  }
+
   labelClass(field: string, size?: number, color?: Color | string): __esri.LabelClassProperties {
     return {
       labelExpressionInfo: { expression: `$feature.${field}` },
@@ -213,7 +325,14 @@ export class LayersService {
   }
 
   // ---------------- per-style renderers ----------------
+  /**
+   * Applies a rendering mode ('realistic', 'blueprint', or 'sketch') across all site layers.
+   * Adjusts materials, edge effects, transparency, tree symbols, and lighting.
+   *
+   * @param mode Render style mode.
+   */
   applyStyle(mode: RenderMode): void {
+    this.solidRenderers.clear();
     this.mode.set(mode);
     const D = this.D;
     const bp = mode === 'blueprint', sk = mode === 'sketch', night = this.night();
@@ -252,7 +371,7 @@ export class LayersService {
     };
     this.water.renderer = bp || sk
       ? { type: 'simple', symbol: fill(bp ? [60, 160, 255, 0.5] : [200, 225, 240, 1], bp ? [180, 230, 255] : [60, 60, 60], 1) }
-      : { type: 'simple', symbol: { type: 'polygon-3d', symbolLayers: [{ type: 'water', waveDirection: 260, color: '#25a5b8', waveStrength: 'slight', waterbodySize: 'small' }] } };
+      : this.realisticWater(this.state.cinema());
 
     const bc: Record<string, string> = { national: '#efe8da', corporate: '#dfe6ee', hospitality: '#f1d9bf', retail: '#e8d6ee', media: '#d4e3f0', service: '#e6eedf', gate: '#c9a24b', metro: '#0f7a52' };
     this.buildings.renderer = {
@@ -277,6 +396,11 @@ export class LayersService {
     this.refreshPlots();
   }
 
+  /**
+   * Toggles nocturnal street and building lighting and updates lamp posts and lantern glow.
+   *
+   * @param on True to activate night illumination; false for daytime.
+   */
   setNight(on: boolean): void {
     this.night.set(on);
     const mode = this.mode();
@@ -310,6 +434,11 @@ export class LayersService {
     this.buildings.definitionExpression = parts.join(' AND ');
   }
 
+  /**
+   * Updates the 3D extruded hexagon crowd density visualization for a given hour of the day (0..23).
+   *
+   * @param h Hour of the day from 0 to 23.
+   */
   setCrowdHour(h: number): void {
     this.crowdHour.set(h);
     this.crowd.renderer = {
@@ -326,6 +455,9 @@ export class LayersService {
   }
 
   // ---------------- plots (status pads + labels) ----------------
+  /**
+   * Instantiates base 3D polygon graphics for each plot in the database.
+   */
   buildPlots(): void {
     const graphics: Record<string, Graphic> = {};
     this.plotGraphics = graphics;
@@ -338,6 +470,10 @@ export class LayersService {
     this.refreshPlots();
   }
 
+  /**
+   * Refreshes plot polygon symbols and text callout labels according to the current
+   * state (e.g. selection, reservation status, blueprint vs realistic mode).
+   */
   refreshPlots(): void {
     if (!this.plotGraphics || !this.initialised) return;
     const bp = this.mode() === 'blueprint', selected = this.state.selected();
@@ -368,6 +504,10 @@ export class LayersService {
   }
 
   // ---------------- landmarks: Globe, rings, fountains ----------------
+  /**
+   * Builds 3D landmark graphics including The Globe centerpiece, golden orbiting rings,
+   * and realistic fountains situated in reflecting pools.
+   */
   buildLandmarks(): void {
     const c = this.D.site.globe, z0 = 0;
     this.landmarks.removeAll();
@@ -408,6 +548,9 @@ export class LayersService {
   }
 
   // ---------------- metro viaduct + animated train ----------------
+  /**
+   * Constructs the elevated Riyadh Metro viaduct, pillars, and initializes the 3D train model.
+   */
   buildMetro(): void {
     const f = this.D.metro.features[0], deck = f.properties.deck, cs = f.geometry.coordinates;
     this.metroPath = cs;
@@ -434,20 +577,37 @@ export class LayersService {
     }).catch(() => undefined);
   }
 
+  /**
+   * Runs the animation loop for the metro train moving forward, pausing, and reversing along the viaduct.
+   */
   private animateTrain(): void {
     const cycle = 70000;
     let lastH = -999;
-    const tick = () => {
-      if (this.train && this.trainSym && this.metro.visible) {
-        const t = (performance.now() % cycle) / cycle; // 0..1: in (0-.4), dwell(.4-.5), out(.5-.9), dwell
+    let lastTime = 0;
+    let lastS = -1;
+    let t0 = 0;
+    const tick = (now: number) => {
+      // Moving the train forces a full redraw of the heavy 3D scene (≈200-400 ms per frame on integrated GPUs),
+      // which made every click feel slow. So it only runs during the cinematic camera flights (which redraw anyway)
+      // and otherwise stays parked at Expo Station – the scene then redraws only when something actually changes.
+      const running = this.state.cinema();
+      if (!running) t0 = now - 0.45 * cycle;
+      if (now - lastTime >= 50 && this.train && this.trainSym && this.metro.visible) {
+        lastTime = now;
+        const t = ((now - t0) % cycle) / cycle; // 0..1: in (0-.4), dwell(.4-.5), out(.5-.9), dwell
         let s: number;
         if (t < 0.4) s = ease(t / 0.4);
         else if (t < 0.5) s = 1;
         else if (t < 0.9) s = 1 - ease((t - 0.5) / 0.4);
         else s = 0;
+        if (s === lastS) {
+          this.trainRaf = requestAnimationFrame(tick);
+          return;
+        }
+        lastS = s;
         const a = along(this.metroPath, clamp(s * this.trainLen - 60, 20, this.trainLen - 60));
         this.train.geometry = new Point({ x: a.p[0], y: a.p[1], z: this.metroDeck, spatialReference: SR });
-        if (Math.abs(a.h - lastH) > 1.5) {
+        if (Math.abs(a.h - lastH) > 3.0) {
           lastH = a.h;
           const sym = this.trainSym.clone();
           (sym.symbolLayers.getItemAt(0) as ObjectSymbol3DLayer).heading = a.h + 90;
@@ -456,10 +616,13 @@ export class LayersService {
       }
       this.trainRaf = requestAnimationFrame(tick);
     };
-    tick();
+    this.trainRaf = requestAnimationFrame(tick);
   }
 
   // ---------------- visitors (simple figures) ----------------
+  /**
+   * Populates pedestrian figures along streets, promenades, and the central globe plaza.
+   */
   buildPeople(): void {
     let seed = 7;
     const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
@@ -492,6 +655,9 @@ export class LayersService {
   }
 
   // ---------------- landmark + taken-plot pavilions (shell detail) ----------------
+  /**
+   * Generates lightweight 3D exterior shells for landmark buildings and participant pavilions on occupied plots.
+   */
   buildLitePavilions(): void {
     if (!this.initialised) return;
     this.pavLite.removeAll();
@@ -514,11 +680,18 @@ export class LayersService {
     });
   }
 
-  /** Remove the lite shell of a pavilion that is shown in detail (reference `E.hideLite`). */
+  /**
+   * Removes the lightweight shell graphic of a pavilion currently shown in detailed floor-by-floor view.
+   *
+   * @param id The unique identifier of the pavilion.
+   */
   hideLite(id: string): void {
     this.pavLite.removeMany(this.pavLite.graphics.filter(g => g.attributes?.['sid'] === id).toArray());
   }
 
+  /**
+   * Cleans up animation frame handles and cached graphics references upon service destruction.
+   */
   destroy(): void {
     cancelAnimationFrame(this.trainRaf);
     this.train = null;
